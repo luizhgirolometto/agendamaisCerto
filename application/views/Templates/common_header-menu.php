@@ -25,7 +25,7 @@
                     <ul>
 					    <?php if ($this->session->userdata('frontend_logged_in')){								
 							?>
-							<li><a href = "<?php echo base_url(); ?>Welcome"><img src="<?php echo base_url(); ?>assets/images/patient-login/m-1.png" />Hi,<?php if(!empty($match_username)){ echo $match_username; }else{ ?> User <?php } ?> </a></li>
+							<li><a href = "<?php echo base_url(); ?>Welcome"><img src="<?php echo base_url(); ?>assets/images/patient-login/m-1.png" />Olá,<?php if(!empty($match_username)){ echo $match_username; }else{ ?> User <?php } ?> </a></li>
 							<li><a href = "<?php echo base_url(); ?>Logout"><img src="<?php echo base_url(); ?>assets/images/home/2.png" />Logout </a></li>
 						<?php } else{ ?>
 							<li ><a href = "<?php echo base_url(); ?>Login/presignup"><img src="<?php echo base_url(); ?>assets/images/home/1.png" /><?php if($this->lang->line('home_header_signup')): ?><?php echo $this->lang->line('home_header_signup'); else: ?>Signup<?php endif; ?></a></li>

@@ -100,25 +100,25 @@ CREATE TABLE `amenities_categories` (
 
 INSERT INTO `amenities_categories` (`id`, `facility_name`) VALUES
 (1, 'Cafeterias'),
-(2, 'Chapel'),
-(3, 'Gardens and Outdoor Spaces'),
-(4, 'Gifts, Flowers & Salons'),
-(5, 'Libraries & Learning Resources'),
-(6, 'Media & Technology Services'),
-(7, 'Museum'),
+(2, 'Capela'),
+(3, 'Jardins e espaços ao ar livre'),
+(4, 'Presentes, flores e salões'),
+(5, 'Bibliotecas e recursos de aprendizagem'),
+(6, 'Serviços de mídia e tecnologia'),
+(7, 'Museu'),
 (8, 'ATM & Banking'),
-(9, 'Cell Phones'),
-(10, 'E-Mail'),
-(11, 'Electrical Appliances'),
-(12, 'Fire Safety'),
-(13, 'Fitness & Wellness Center'),
-(14, 'Housekeeping Services'),
-(15, 'Public Restrooms'),
-(16, 'Interpreter Service'),
-(17, 'Mail and Flowers'),
-(18, 'Television'),
-(19, 'Wi-Fi Wireless Internet Service'),
-(20, 'Notary Public');
+(9, 'Celulares'),
+(10, 'O email'),
+(11, 'Eletrodomésticos'),
+(12, 'Segurança contra incêndios'),
+(13, 'Centro de fitness e bem-estar'),
+(14, 'Serviços de limpeza'),
+(15, 'Banheiros públicos'),
+(16, 'Serviço de Intérprete'),
+(17, 'Correio e Flores'),
+(18, 'Televisão'),
+(19, 'Wi-Fi Serviço de Internet sem fio'),
+(20, 'Notário público');
 
 -- --------------------------------------------------------
 
@@ -131,13 +131,14 @@ CREATE TABLE `appointment` (
   `status` varchar(255) DEFAULT '0',
   `doctor_id` varchar(255) DEFAULT NULL,
   `patient_id` varchar(255) DEFAULT NULL,
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `appointment_date` varchar(255) DEFAULT NULL,
   `appointment_time` varchar(500) DEFAULT NULL,
   `end_time` varchar(255) DEFAULT NULL,
   `ill_reason` varchar(5000) DEFAULT NULL,
   `insurance` varchar(255) DEFAULT NULL,
-  `final_status` varchar(255) NOT NULL
+  `final_status` varchar(255) NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

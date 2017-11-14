@@ -25,19 +25,14 @@
                     <ul>
 					    <?php if ($this->session->userdata('frontend_logged_in')){								
 							?>
-							<li><a href = "<?php echo base_url(); ?>Welcome"><img src="<?php echo base_url(); ?>assets/images/patient-login/m-1.png" />Hi,<?php if(!empty($match_username)){ echo $match_username; }else{ ?> User <?php } ?> </a></li>
+							<li><a href = "<?php echo base_url(); ?>Welcome"><img src="<?php echo base_url(); ?>assets/images/patient-login/m-1.png" />Olá,<?php if(!empty($match_username)){ echo $match_username; }else{ ?> User <?php } ?> </a></li>
 							<li><a href = "<?php echo base_url(); ?>Logout"><img src="<?php echo base_url(); ?>assets/images/home/2.png" />Logout </a></li>
 						<?php } else{ ?>
 							<li ><a href = "<?php echo base_url(); ?>Login/presignup"><img src="<?php echo base_url(); ?>assets/images/home/1.png" /><?php if($this->lang->line('home_header_signup')): ?><?php echo $this->lang->line('home_header_signup'); else: ?>Signup<?php endif; ?></a></li>
 							<li onclick="mysigninFunction()" data-toggle="modal" class="log-index" data-target="#myModal"><img src="<?php echo base_url(); ?>assets/images/home/2.png" /><?php if($this->lang->line('home_header_signin')): ?><?php echo $this->lang->line('home_header_signin'); else: ?>Signin<?php endif; ?></li>
 						<?php } ?>
 						<li>
-							<select class="selectpicker" data-style="btn-info" onchange="javascript:window.location.href='<?php echo base_url(); ?>LanguageSwitcher/switchLang/'+this.value;">
-								<option value="english" <?php if(!$this->session->userdata('site_lang')): echo 'selected="selected"'; endif; ?>>Default: English(IN)</option>
-								<?php foreach($trimmed_lang as $single_lang): ?>
-								<option value="<?php echo $single_lang; ?>" <?php if($this->session->userdata('site_lang')): ?><?php if($single_lang == $this->session->userdata('site_lang')): echo 'selected="selected"'; endif; ?> <?php endif; ?>><?php echo $single_lang; ?></option>
-								<?php endforeach; ?>	
-							</select>
+
 						</li>			
 					</ul>
                 </div>
