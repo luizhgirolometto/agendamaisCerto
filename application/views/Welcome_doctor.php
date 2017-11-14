@@ -17,15 +17,15 @@
 		<?php if($end_date == '' & $trial_date >= $current_date  ){?>					
 			<div class="alert">
 				<button class="close" data-dismiss="alert" type="button">×</button>
-				<h3><?php if($lgdoctormod74){ echo $lgdoctormod74; }else { ?>Alert Message<?php } ?>:</h3>
-				<h4> <?php if($lgdoctormod75){ echo $lgdoctormod75; }else { ?>You are using 15 days free trial version.Once the trial period is expired , your details listing will be removed from Search Filter. Select any package to extend your service under Bookmydoc.<?php } ?>
+				<h3><?php if($lgdoctormod74){ echo $lgdoctormod74; }else { ?>Mensagem de Alerta<?php } ?>:</h3>
+				<h4> <?php if($lgdoctormod75){ echo $lgdoctormod75; }else { ?>Você está usando versão de teste gratuita de 15 dias. Uma vez expirado o período de avaliação, sua listagem de detalhes será removida do Filtro de Pesquisa. Selecione qualquer pacote para estender seu serviço AgendaMais.<?php } ?>
 				</h4>
 			</div>								                                   
 		<?php } elseif($end_date < $current_date) { ?>							
 			<div class="alert">
 				<button class="close" data-dismiss="alert" type="button">×</button>
-				<h3><?php if($lgdoctormod74){ echo $lgdoctormod74; }else { ?>Alert Message<?php } ?>:</h3>
-				<h4>  <?php if($lgdoctormod76){ echo $lgdoctormod76; }else { ?>Your Package period is expired . Kindly Select any package to list your details under Bookmydoc.<?php } ?>
+				<h3><?php if($lgdoctormod74){ echo $lgdoctormod74; }else { ?>Mensagem de Alerta<?php } ?>:</h3>
+				<h4>  <?php if($lgdoctormod76){ echo $lgdoctormod76; }else { ?>Seu período de pacote expirou. Por favor, selecione qualquer pacote para listar seus detalhes em AgendaMais.<?php } ?>
 				</h4>
 			</div>								                                         
 		<?php } else{ ?>
