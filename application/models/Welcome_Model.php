@@ -500,7 +500,7 @@ class Welcome_Model extends CI_Model
 	function remove_apdoctor_another($id){
 		$data['status'] = "0";
 		$this->db->where("doctor_id",$id);
-		if($this->db->update("appointment",$data)){
+		if($this->db->delete("appointment",$data)){
 			return "success";
 		}	
 	}
