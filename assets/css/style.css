@@ -3455,8 +3455,8 @@ height: 150px;
 
 .first_pack {
     width:100%;
-    border: 1px solid #b7578a;
-    background-color:#841d54;
+    border: 1px solid #3b8bba;
+    background-color:#265778;
     margin-top:20px;
     text-align: center;
 }
@@ -3493,7 +3493,7 @@ height: 150px;
 
 .first_pack hr{
     width: 40%;
-    border-top: 1px solid #b7578a;
+    border-top: 1px solid #3b8bba;
     border-bottom: none;
 }
 
