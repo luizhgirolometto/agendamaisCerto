@@ -160,7 +160,7 @@
 								<?php }  } else{  ?>
 									<div class="notification">
 										<h4><img src="<?php echo base_url(); ?>assets/images/patient-login/noti.png" /> </h4>
-										<h5>You don't have medical teams </h5>
+										<h5>Você não tem consultas agendadas. </h5>
 									</div>								
 								<?php } ?>
 								</div>								 
