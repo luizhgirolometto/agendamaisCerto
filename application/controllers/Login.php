@@ -56,7 +56,7 @@ class Login extends CI_Controller {
 					$data['trial_date'] = date("Y-m-d", strtotime("+15 days"));
 					$data['type_selection'] = 'individual';
 					$this->Login_Model->Insert_doctor($data);				  
-					$this->session->set_flashdata('message',array('message' => 'Successfully Enrolled.Please Signin to view your account','class' => 'success'));								
+					$this->session->set_flashdata('message',array('message' => 'Cadastrado com sucesso! Faça login para ver sua conta.','class' => 'success'));								
 				}				
 			}elseif($data['type'] == 'clinic'){				
 				$this->load->library('form_validation');
@@ -74,7 +74,7 @@ class Login extends CI_Controller {
 					$data['trial_date'] = date("Y-m-d", strtotime("+15 days"));
 					$data['type_selection'] = 'individual';
 					$this->Login_Model->Insert_clinic($data);				  
-					$this->session->set_flashdata('message',array('message' => 'Successfully Enrolled.Please Signin to view your account','class' => 'success'));								
+					$this->session->set_flashdata('message',array('message' => 'Cadastrado com sucesso! Faça login para ver sua conta.','class' => 'success'));								
 				}				
 			}elseif($data['type'] == 'hospital'){				
 				$this->load->library('form_validation');
@@ -92,7 +92,7 @@ class Login extends CI_Controller {
 					$data['trial_date'] = date("Y-m-d", strtotime("+15 days"));
 					$data['type_selection'] = 'individual';
 					$this->Login_Model->Insert_hospital($data);				  
-					$this->session->set_flashdata('message',array('message' => 'Successfully Enrolled.Please Signin to view your account','class' => 'success'));								
+					$this->session->set_flashdata('message',array('message' => 'Cadastrado com sucesso! Faça login para ver sua conta.','class' => 'success'));								
 				}				
 			}elseif($data['type'] == 'medical'){				
 				$this->load->library('form_validation');
@@ -110,7 +110,7 @@ class Login extends CI_Controller {
 					$data['trial_date'] = date("Y-m-d", strtotime("+15 days"));
 					$data['type_selection'] = 'individual';
 					$this->Login_Model->Insert_medical($data);				  
-					$this->session->set_flashdata('message',array('message' => 'Successfully Enrolled.Please Signin to view your account','class' => 'success'));								
+					$this->session->set_flashdata('message',array('message' => 'Cadastrado com sucesso! Faça login para ver sua conta.','class' => 'success'));								
 				}				
 			}else{
 				redirect(base_url()+"Login\doctor");

@@ -1044,11 +1044,11 @@
 															<div class="col-lg-4 right_pad">
 																<div class="form-group">
 																	<div class="first_pack">
-																		<?php if($packs->package_name == 'silver'){ ?>
+																		<?php if($packs->package_name == 'prata'){ ?>
 																		<img src="<?php echo base_url(); ?>assets/images/packages/noti_pic1.png" alt="" class=""/>
-																		<?php }elseif($packs->package_name == 'gold'){ ?>
+																		<?php }elseif($packs->package_name == 'ouro'){ ?>
 																		<img src="<?php echo base_url(); ?>assets/images/packages/noti_pic2.png"  alt="" class=""/>
-																		<?php }elseif($packs->package_name == 'diamond'){ ?>
+																		<?php }elseif($packs->package_name == 'diamante'){ ?>
 																		<img src="<?php echo base_url(); ?>assets/images/packages/noti_pic3.png"  alt="" class=""/>
 																		<?php }else{ ?>
 																		<img src="<?php echo base_url(); ?>assets/images/packages/noti_pic1.png" alt="" class=""/>
@@ -1064,7 +1064,7 @@
 																		<form method="post" action="" enctype="multipart/form-data">
 																			<input type="hidden" name="status" value="0" >
 																			<input type="hidden" name="hospital_type" value="hospital" >
-																			<button class="first_pack_btn buy_now" name="package_id" value="<?php echo $packs->id;?>" ><?php if($lgdoctormod73){ echo $lgdoctormod73; }else { ?>Select<?php } ?></button>
+																			<button class="first_pack_btn buy_now" name="package_id" value="<?php echo $packs->id;?>" ><?php if($lgdoctormod73){ echo $lgdoctormod73; }else { ?>Quero esse<?php } ?></button>
 																		</div>
 																	</div>
 																</div>

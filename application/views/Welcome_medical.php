@@ -1044,11 +1044,11 @@
 															<div class="col-lg-4 right_pad">
 																<div class="form-group">
 																	<div class="first_pack">
-																		<?php if($packs->package_name == 'silver'){ ?>
+																		<?php if($packs->package_name == 'prata'){ ?>
 																		<img src="<?php echo base_url(); ?>assets/images/packages/noti_pic1.png" alt="" class=""/>
-																		<?php }elseif($packs->package_name == 'gold'){ ?>
+																		<?php }elseif($packs->package_name == 'ouro'){ ?>
 																		<img src="<?php echo base_url(); ?>assets/images/packages/noti_pic2.png"  alt="" class=""/>
-																		<?php }elseif($packs->package_name == 'diamond'){ ?>
+																		<?php }elseif($packs->package_name == 'diamante'){ ?>
 																		<img src="<?php echo base_url(); ?>assets/images/packages/noti_pic3.png"  alt="" class=""/>
 																		<?php }else{ ?>
 																		<img src="<?php echo base_url(); ?>assets/images/packages/noti_pic1.png" alt="" class=""/>
