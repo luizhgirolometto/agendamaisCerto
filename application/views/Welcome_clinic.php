@@ -768,6 +768,7 @@
 											<?php echo $messagedashfeat['messagedashfeat']; ?>
 										</div>
 										<?php }	?>	
+
 										<div class="form-hospital-dash outhospitaladd">
 											<form method="post" data-parsley-validate="" enctype="multipart/form-data">
 												<div class="clearfix"></div>
@@ -776,13 +777,13 @@
 														<div class="row">
 															<div class="col-lg-3">
 																<div class="text-left-hsp">
-																	<h6><?php if($this->lang->line('hospital_tab_F1')){ ?><?php echo $this->lang->line('hospital_tab_F1'); }else{ ?>Affiliations<?php } ?></h6>
+																	<h6>Nome do Cliente</h6>
 																</div>
 															</div>
 															<div class="col-lg-8">
-																<select    name="clinic_affilliations[]" class="form-control select2" id="exampleSelect1" multiple="multiple" data-parsley-minSelect="1" required="" >
-																<?php $arry_select = explode(",", $hospital_data->clinic_affilliations); foreach($affilliation as $row_affilliation){ ?>
-																	<option value="<?php echo $row_affilliation->id;?>" <?php if (in_array($row_affilliation->id, $arry_select)) echo 'selected';  ?>	 ><?php echo $row_affilliation->hospital_name;?></option> 
+																<select    name="patient_personal[]" class="form-control select2" id="exampleSelect1" multiple="multiple" data-parsley-minSelect="1" required="" >
+																<?php $arry_select = explode(",", $patient_personal->patient_firstname); foreach($patient_firstname as $row_fisrtname){ ?>
+																	<option value="<?php echo $row_fisrtname->id;?>" <?php if (in_array($row_affilliation->id, $arry_select)) echo 'selected';  ?>	 ><?php echo $row_fisrtname->patient_firstname;?></option> 
 																<?php } ?>                            
 																</select>
 															</div>
