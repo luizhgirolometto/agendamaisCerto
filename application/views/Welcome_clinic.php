@@ -769,106 +769,160 @@
 										</div>
 										<?php }	?>	
 
-										<div class="form-hospital-dash outhospitaladd">
-											<form method="post" data-parsley-validate="" enctype="multipart/form-data">
-												<div class="clearfix"></div>
-												<div class="form-group hos-frm-grp">
-													<div class="col-lg-10">
-														<div class="row">
-															<div class="col-lg-3">
-																<div class="text-left-hsp">
-																	<h6>Nome do Cliente</h6>
-																</div>
-															</div>
-															<div class="col-lg-8">
-																<select    name="patient_personal[]" class="form-control select2" id="exampleSelect1" multiple="multiple" data-parsley-minSelect="1" required="" >
-																<?php $arry_select = explode(",", $patient_personal->patient_firstname); foreach($patient_firstname as $row_fisrtname){ ?>
-																	<option value="<?php echo $row_fisrtname->id;?>" <?php if (in_array($row_affilliation->id, $arry_select)) echo 'selected';  ?>	 ><?php echo $row_fisrtname->patient_firstname;?></option> 
-																<?php } ?>                            
-																</select>
-															</div>
-														</div>
-														<div class="row">
-															<div class="col-lg-3">
-																<div class="text-left-hsp">
-																	<h6><?php if($this->lang->line('hospital_tab_F2')){ ?><?php echo $this->lang->line('hospital_tab_F2'); }else{ ?>Amenities<?php } ?></h6>
-																</div>
-															</div>
-															<div class="col-lg-8">
-																<select    name="amenities[]" class="form-control select2" id="exampleSelect1" multiple="multiple" data-parsley-minSelect="1" required="" >
-																<?php $arry_select = explode(",", $hospital_data->amenities);foreach($amenities as $row_amenities){ ?>
-																	<option value="<?php echo $row_amenities->id;?>" <?php if (in_array($row_amenities->id, $arry_select)) echo 'selected';  ?>><?php echo $row_amenities->facility_name;?></option> 
-																<?php } ?>                            
-																</select>
-															</div>
-														</div>
-														<div class="row">
-															<div class="col-lg-3">
-																<div class="text-left-hsp">
-																	<h6><?php if($this->lang->line('hospital_tab_F3')){ ?><?php echo $this->lang->line('hospital_tab_F3'); }else{ ?>Languages<?php } ?></h6>
-																</div>
-															</div>
-															<div class="col-lg-8">
-																<select    name="clinic_languages[]" class="form-control select2" id="exampleSelect1" multiple="multiple" data-parsley-minSelect="1" required="" >
-																<?php $arry_select = explode(",", $hospital_data->clinic_languages); foreach($tab_languages as $row_languages){ ?>
-																	<option value="<?php echo $row_languages->id;?>" <?php if (in_array($row_languages->id, $arry_select)) echo 'selected';  ?> ><?php echo $row_languages->language_name;?></option> 
-																<?php } ?>                            
-																</select>
-															</div>
-														</div>
-														<div class="row">
-															<div class="col-lg-3">
-																<div class="text-left-hsp">
-																	<h6><?php if($this->lang->line('hospital_tab_F4')){ ?><?php echo $this->lang->line('hospital_tab_F4'); }else{ ?>Specialty<?php } ?></h6>
-																</div>
-															</div>
-															<div class="col-lg-8">
-																<select    name="specialty[]" class="form-control select2" id="exampleSelect1" multiple="multiple" data-parsley-minSelect="1" required="" >
-																	<?php $arry_select = explode(",", $hospital_data->specialty);
-																	foreach($specialties as $row_specialty){ ?>
-																	<option value="<?php echo $row_specialty->id;?>" <?php if (in_array($row_specialty->id, $arry_select)) echo 'selected';  ?> ><?php echo $row_specialty->specialty_name;?></option> 
-																	<?php } ?>                            
-																</select>
-															</div>
-														</div>
-														<div class="row">
-															<div class="col-lg-3">
-																<div class="text-left-hsp">
-																	<h6><?php if($this->lang->line('hospital_tab_F5')){ ?><?php echo $this->lang->line('hospital_tab_F5'); }else{ ?>Insurance<?php } ?></h6>
-																</div>
-															</div>
-															<div class="col-lg-8">
-																<select    name="insurance[]" class="form-control select2" id="exampleSelect1" multiple="multiple" data-parsley-minSelect="1" required="" >
-																	<?php $arry_select = explode(",", $hospital_data->insurance); foreach($insurance as $row_insurance){ ?>
-																	<option value="<?php echo $row_insurance->id;?>" <?php if (in_array($row_insurance->id, $arry_select)) echo 'selected';  ?> ><?php echo $row_insurance->insurance_name;?></option> 
-																	<?php } ?>
-																</select> 
-															</div>
-														</div>
-														<div class="row">
-															<div class="col-lg-3">
-																<div class="text-left-hsp">
-																	<h6><?php if($this->lang->line('hospital_tab_F6')){ ?><?php echo $this->lang->line('hospital_tab_F6'); }else{ ?>Visitation<?php } ?></h6>
-																</div>
-															</div>
-															<div class="col-lg-8">
-																<select    name="visitation[]" class="form-control select2" id="exampleSelect1" multiple="multiple" data-parsley-minSelect="1" required="" >
-																	<?php $arry_select = explode(",", $hospital_data->visitation); foreach($visitation as $row_visitation){ ?>
-																	<option value="<?php echo $row_visitation->id;?>" <?php if (in_array($row_visitation->id, $arry_select)) echo 'selected';  ?> ><?php echo $row_visitation->reason;?></option> 
-																	<?php } ?>                            
-																</select> 
-															</div>
-														</div>
-													</div>
-												</div>	
-												<div class="clearfix"></div>
-												<div class="row">
-													<div class="col-lg-10">
-														<h4 class="h4-sub-mn"><button type="submit" name="hospital_additional-feat" value="hospital_additional-feat" class="btn btn-default bfn-sve"><?php if($lghosmod38){ echo $lghosmod38; }else { ?>Add<?php } ?><span><img src="<?php echo base_url(); ?>assets/images/dashboard/15.png" /></span></button></h4>
-													</div>
+<!--doctor-->
+<div class="container">
+    <div class="doctor-sub">
+       <h3><img src="<?php echo base_url(); ?>assets/images/patient-login/12.png"  ></h3>
+        <h4><?php if($this->lang->line('clinicprofile_slide_A7')){ ?><?php echo $this->lang->line('clinicprofile_slide_A7'); }else{ ?>Select a Speciality Doctor <?php } ?> </h4>
+    </div>
+    <div class="doctor-pat-srch">     
+        <div class="row">
+			<input type="hidden" value='<?php echo $actual_data;?>' id="actual_data">
+            <div class="evnt-mn doctor" id="updates">
+				<div class="col-lg-6" style="padding-right: 0px;">
+					<?php 
+					if(!empty($doctors)) {
+						if(isset($doctors)) {			          
+							foreach($doctors as $doctor_detail){
+						?>
+					<div class="evt-br doctor">				
+						<div class="left-events left-img-ph">
+							<?php if($doctor_detail->display_image != ""){ ?>
+							<img src= "<?php echo base_url(); ?>admin/<?php echo  $doctor_detail->display_image;?>" >
+							<?php }else{ ?>
+							<img src="<?php echo base_url(); ?>assets/images/home/man.png">
+							<?php  }?>
+						</div>
+						<div class="left-events">
+							<h5>Dr. <?php echo $doctor_detail->doctor_firstname;?> <?php echo $doctor_detail->doctor_lastname;?></h5>
+							<div class="gc-ratting" data-rate="<?php echo $doctor_detail->avg_rating; ?>" ></div>
+							<div class="pt-ent">
+								<div class="row">
+									<div class="col-lg-1">
+										<img src="<?php echo base_url(); ?>assets/images/patient-login/13.png" />
+									</div>
+									<div class="col-lg-4">
+										<h6> <?php echo $doctor_detail->city_name;?>,<?php echo $doctor_detail->state_name;?>, <?php echo $doctor_detail->country_name;?> <?php echo $doctor_detail->doctor_office_zip;?></h6>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="view-prf">
+							<div class="row">
+								<div class="col-lg-4">
+									<img src="<?php echo base_url(); ?>assets/images/patient-login/14.png" />
+									<h6><a href ="<?php echo base_url(); ?>Doctor/Profile/<?php echo $doctor_detail->id; ?>"><?php if($this->lang->line('clinicprofile_slide_A6')){ ?><?php echo $this->lang->line('clinicprofile_slide_A6'); }else{ ?>View Profile<?php } ?></a></h6>
+								</div>
+								<div class="col-lg-4">
+									<img src="<?php echo base_url(); ?>assets/images/patient-login/15.png" />
+									<h6><a class ="modalbookapp" href ="javascript:void(0);" id="<?php echo $doctor_detail->id; ?>" ><?php if($this->lang->line('clinicprofile_slide_A9')){ ?><?php echo $this->lang->line('clinicprofile_slide_A9'); }else{ ?>Book Online<?php } ?></a></h6>
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php } ?>
+				</div>
+				<div class="col-lg-5 evt-br-1" id="calendar_blk">
+					<?php foreach($doctors as $doctor_detail){ 
+					get_doccalendar($doctor_detail->id);				
+					 } ?>
+                </div>
+				<?php }	} else { ?>						
+				<div class="error"><h1><?php if($this->lang->line('clinicprofile_slide_A10')){ ?><?php echo $this->lang->line('clinicprofile_slide_A10'); }else{ ?>Sorry, No records found. Please try with different keywords. <?php } ?> </h1></div>
+			       	<div class="clearfix"></div>												
+				<?php  } ?>
+			</div>
+		</div>									
+		<!--- modal ---->	
+		<div class="container">
+			<!-- Modal -->
+			<div class="modal fade bac-modal" id="myModalbook-app" role="dialog">
+				<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content login-modal">
+						<button type="button" class="btn btn-default close-mdl" data-dismiss="modal"><img src="<?php echo base_url(); ?>assets/images/login/2.png" /> </button>
+						<!----- dummy---->
+						<div class="container">
+							<div class="doctor-pat-srch">     
+								<div class="row">
+									<div class="evnt-mn doctor" id="updates">
+										<div class="col-lg-5 evt-br-1" id="calendar_blk">				
+											<div class="date-head">
+												<div class="previouscalapp" id="<?php echo $doctor_detail->id; ?>" data-date="<?php echo $date;?>" data-selected="true">
+													<img id="previouscalapp" src="<?php echo base_url(); ?>assets/images/career/cal-left.png" />
 												</div>
-											</form>
-										</div>	
+												<div class="dttime">
+													<ul>
+														<div class="dttime-list">
+															<li> <h5><?php echo $date= date('D Y-m-d');?></h5></li>
+														</div>
+														<div class="dttime-list">
+															<li> <h5><?php echo date('D Y-m-d', strtotime($date. ' + 1 days')) ?></h5></li>
+														</div>
+														<div class="dttime-list">	
+															<li> <h5><?php echo date('D Y-m-d', strtotime($date. ' + 2 days')) ?></h5></li>
+														</div>
+													</ul>
+												</div>
+												<div class="nextcalapp " id="<?php echo $doctor_detail->id; ?>" data-date="<?php echo $date;?>" data-selected="true">
+													<img id="nextcalapp" src="<?php echo base_url(); ?>assets/images/career/cal-right.png" />
+												</div>
+												<div class="clearfix"></div>
+											</div>					
+											<div class="date-inner-mn">
+												<div class="date-inner-mn-list">
+													<ul>						 
+														<li class="active">9 : 00 am</li>
+														<li>9 : 00 am</li>
+														<li>Break</li>
+														<li>Break</li>
+														<li>Break</li>
+														<li>Break</li>
+														<li>Break</li>
+														<li>Break</li>
+														<li>Break</li>
+														<li>Break</li>
+													</ul>
+												</div>
+												<div class="date-inner-mn-list">
+													<ul>
+														<li>9 : 00 am</li>
+														<li>9 : 00 am</li>
+														<li>Break</li>
+														<li>Break</li>
+														<li>Break</li>
+														<li>Break</li>
+														<li>Break</li>
+														<li>Break</li>
+														<li>Break</li>
+														<li>Break</li>
+													</ul>
+												</div>
+												<div class="date-inner-mn-list">
+													<ul>
+														<li>9 : 00 am</li>
+														<li>9 : 00 am</li>	
+														<li>Break</li>
+														<li>Break</li>
+														<li>Break</li>
+														<li>Break</li>
+														<li>Break</li>
+														<li>Break</li>
+														<li>Break</li>
+														<li>Break</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>				
+					</div>
+				</div>
+			</div>
+		</div>       												
+	</div>
 									</div>
 									<!----new appointment end -------------->									
 

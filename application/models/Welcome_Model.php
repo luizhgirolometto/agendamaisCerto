@@ -230,6 +230,16 @@ class Welcome_Model extends CI_Model
 		$patient_personal = $query->row();		
         return $patient_personal;	
 	}
+
+	function get_allpatients(){
+		$this->db->select('pat.id as id,pat.age,pat.insurance,pat.languages,pat.address,pat.phone,pat.state,pat.country,pat.city,pat.zip,pat.dob,pat.marital_status,pat.username,pat.patient_display_image,pat.terms,pat.patient_sex,pat.password,pat.email,pat.patient_firstname,pat.patient_lastname		
+		');
+		$this->db->from('patient as pat');				
+		$this->db->group_by('pat.id');
+		$query = $this -> db -> get();		
+		$all_patientes = $query->row();		
+        return $all_patientes;	
+	}	
 	function get_states(){
 		$this->db->select('*');
 		$this->db->from('state_categories ');

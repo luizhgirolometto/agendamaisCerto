@@ -48,6 +48,7 @@ class Welcome extends CI_Controller {
 			$search_template['final_patient_history'] =$this->Welcome_Model->get_patient_history_final($id);
 			$search_template['patient_history'] =$this->Welcome_Model->get_patient_history_final($id);
 			$search_template['an_patient_history'] =$this->Welcome_Model->get_an_patient_history($id);
+			$search_template['all_patientes'] = $this->Welcome_Model->all_patientes();
 			$new_app_pat = array();
 			foreach($search_template['patient_history'] as $docpatdetail){				
 				$docpatdetail->total = $this->Welcome_Model->get_hospapppat_doctor($docpatdetail->id,$id);
@@ -85,7 +86,8 @@ class Welcome extends CI_Controller {
 				$ndocdetail->totalanother = $this->Welcome_Model->get_hospappclinic_doctorall($ndocdetail->id);
 				$new_appall[] = $ndocdetail;
 			}
-			$search_template['an_patient_history'] =$this->Welcome_Model->get_an_patientagainclinic_history($id);			
+			$search_template['an_patient_history'] =$this->Welcome_Model->get_an_patientagainclinic_history($id);
+			$search_template['all_patientes'] = $this->Welcome_Model->all_patientes();			
 			$new_appnew = array();
 			foreach($search_template['an_patient_history'] as $ndocdetails){				
 				$ndocdetails->totalanother = $this->Welcome_Model->get_hospappclinic_doctorall($ndocdetails->id);
