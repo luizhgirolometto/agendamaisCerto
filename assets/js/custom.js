@@ -751,10 +751,10 @@
 					if(data == 'loggedIn'){					 
 						document.location.reload();				
 					}else if(data == 'No'){
-						var error = '<div class="errormsg2p"><h4>Sorry you have entered wrong information <h4></div>';
+						var error = '<div class="errormsg2p"><h4>Desculpe, você digitou informações erradas <h4></div>';
 						$('.errormsg2p').html(error);
 					}else{
-						var error = '<div class="errormsg2p"><h4>Sorry you have entered wrong information <h4></div>';
+						var error = '<div class="errormsg2p"><h4>Desculpe, você digitou informações erradas<h4></div>';
 						$('.errormsg2p').html(error);
 					}                       									
 				}						
