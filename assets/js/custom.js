@@ -663,11 +663,11 @@
 				if(result == 'success'){
 					window.location.href = base_url+ "Doctor/Booking/"+id+"/"+date+"/"+time;
 				}else{
-					alert("Booking time is expired.please select valid time and date to book an appointment");
+					alert("O tempo de reserva expirou. Por favor, selecione a hora e a data válidas");
 				}
 			},
 			error: function() {
-			  alert("Booking time is expired.please select valid time and date to book an appointment");
+			  alert("O tempo de reserva expirou. Por favor, selecione a hora e a data válidas para marcar");
 			}
 		});
 	}
