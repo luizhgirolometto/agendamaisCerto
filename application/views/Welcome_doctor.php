@@ -78,7 +78,7 @@
 					<li class="active"><a data-toggle="tab" href="#homes"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/2.1.png" /> </span>Agenda</a></li>
 					<li><a data-toggle="tab" href="#menus3"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/calen.png" /> </span>Inserir consulta</a></li>					
 					<li><a data-toggle="tab" href="#menus1"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/calen.png" /> </span>Configurar agenda</a></li>
-					<li><a data-toggle="tab" href="#menus2"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/2.3.png" /> </span>Cofigurações</a></li>
+					<li><a data-toggle="tab" href="#menus2"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/2.3.png" /> </span>Configurações</a></li>
 				</ul>
 			</div>
 			<div class="container-fluid tab-fluid">
