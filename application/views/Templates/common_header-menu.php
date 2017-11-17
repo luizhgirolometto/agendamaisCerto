@@ -119,7 +119,7 @@
 				<div class="col-lg-6">
 					<div class="bac-right-login">
 						<h4><?php if($this->lang->line('login_sigin_A6')){ ?><?php echo $this->lang->line('login_sigin_A6'); }else{ ?>I'm new in Bookmydoc<?php } ?></h4>
-						<h5>Sign up for a book my doc account to book an appointment right now!</h5>
+						<h5>Entre para poder ver sua agenda, e administrar seus horários!</h5>
 						<a href = "<?php echo base_url(); ?>Login/presignup"><?php if($this->lang->line('login_sigin_A8')){ ?><?php echo $this->lang->line('login_sigin_A8'); }else{ ?>Sign up Now !<?php } ?></a>
 					</div>
 				</div>

@@ -91,7 +91,7 @@ require 'admin/includes/'.$textFile.$extension;
 								</div>
 							</form>
 						</div>						
-						<!---- new --->
+					
 						<div class="main-lg-reset">
 							<form id="form_forgot" action="" method="post" data-parsley-validate="" class="validate">
 								<div class="col-lg-12">
@@ -116,7 +116,7 @@ require 'admin/includes/'.$textFile.$extension;
 				<div class="col-lg-6">
 					<div class="bac-right-login">
 						<h4><?php if($lgsd1p){ echo $lgsd1p; }else { ?>I'm new in Bookmydoc<?php } ?></h4>
-						<h5><?php if($lgsd2p){ echo $lgsd2p; }else { ?>Sign up for a book my doc account to book an appointment right now!<?php } ?></h5>
+						<h5><?php if($lgsd2p){ echo $lgsd2p; }else { ?>Entre para poder ver sua agenda, e administrar seus horários!<?php } ?></h5>
 						<a href = "<?php echo base_url(); ?>Login/presignup"><?php if($lgsd3p){ echo $lgsd3p; }else { ?>Sign up Now !<?php } ?></a>
 					</div>
 				</div>
