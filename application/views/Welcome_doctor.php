@@ -75,9 +75,10 @@
 		<div class="tab-cnt-search">
 			<div class="container">
 				<ul class="nav nav-tabs  nav-tb dct-tab">
-					<li class="active"><a data-toggle="tab" href="#homes"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/2.1.png" /> </span><?php if($this->lang->line('doctor_tab_A1')){ ?><?php echo $this->lang->line('doctor_tab_A1'); }else{ ?>Appointment<?php } ?></a></li>
-					<li><a data-toggle="tab" href="#menus1"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/calen.png" /> </span><?php if($this->lang->line('doctor_tab_B1')){ ?><?php echo $this->lang->line('doctor_tab_B1'); }else{ ?>Calender Setting<?php } ?></a></li>
-					<li><a data-toggle="tab" href="#menus2"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/2.3.png" /> </span><?php if($this->lang->line('doctor_tab_C1')){ ?><?php echo $this->lang->line('doctor_tab_C1'); }else{ ?>Settings<?php } ?></a></li>
+					<li class="active"><a data-toggle="tab" href="#homes"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/2.1.png" /> </span>Agenda</a></li>
+					<li><a data-toggle="tab" href="#menus3"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/calen.png" /> </span>Inserir consulta</a></li>					
+					<li><a data-toggle="tab" href="#menus1"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/calen.png" /> </span>Configuração da agenda</a></li>
+					<li><a data-toggle="tab" href="#menus2"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/2.3.png" /> </span>COnfigurações</a></li>
 				</ul>
 			</div>
 			<div class="container-fluid tab-fluid">
