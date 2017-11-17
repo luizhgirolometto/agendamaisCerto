@@ -121,17 +121,19 @@
 						    <div id="menus1" class="tab-pane fade">
 								<div class="container">
 									<div class="doctor-sub">
-										<h3><img src="<?php echo base_url(); ?>assets/images/patient-login/12.png"  ></h3>
-										<h4><?php if($this->lang->line('doctorfilter_slide_A13')){ ?><?php echo $this->lang->line('doctorfilter_slide_A13'); }else{ ?>Select a Speciality Doctor <?php } ?></h4>
+										
 									</div>
 									<div class="doctor-pat-srch">     
 										<div class="row">
 											<input type="hidden" value='<?php echo $actual_data;?>' id="actual_data">
 											<div class="evnt-mn doctor" id="updates">
-												<?php if(!empty($doctors)) { 
-														if(isset($doctors)) { ?>
+												<?php if(!empty($doctor_personal)) { 
+														if(isset($doctor_personal)) { ?>
+
+
+														
 												<div class="col-lg-6" style="padding-right: 0px;">
-												<?php foreach($doctors as $doctor_detail){ ?>
+												<?php foreach($doctor_personal as $doctor_detail){ ?>
 													<div class="evt-br doctor">				
 														<div class="left-events left-img-ph">
 															<?php if($doctor_detail->display_image != ""){ ?>
@@ -170,11 +172,11 @@
 												<?php } ?>
 											</div>
 											<div class="col-lg-5 evt-br-1" id="calendar_blk">
-											<?php foreach($doctors as $doctor_detail){ 
+											<?php foreach($doctor_personal as $doctor_detail){ 
 												pull_doccalendar($doctor_detail->id);  } ?>
 											</div>
 											<?php  } } else { ?>						
-												<div class="error"><h1><?php if($this->lang->line('doctorfilter_slide_A17')){ ?><?php echo $this->lang->line('doctorfilter_slide_A17'); }else{ ?>Sorry, No records found. Please try with different keywords.<?php } ?> </h1></div>
+												<div class="error"><h1>Desculpe, algo deu errado ;( </h1></div>
 												<div class="clearfix"></div>												
 											<?php  } ?>
 											</div>
