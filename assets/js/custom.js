@@ -376,8 +376,8 @@
 			var target_class = $(this).attr('target_length');
 			$(target_class).last().find('input[type=text]').val('');
 			$(".timepicker").timepicker({
-				'minTime': '00:00am',
-				'maxTime': '24:00pm',
+				'minTime': '00:00',  // alterado datapicker do break
+				'maxTime': '23:59',
 			showInputs: false
 			});		
 		}
