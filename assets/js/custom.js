@@ -369,7 +369,7 @@
 		var start_date = $(target).find('.start').val();
 		var end_date = $(target).find('.end').val();
 		if(start_date=='' || end_date=="" ){
-			alert('Sorry you can\'t append new row.Because empty field exist');
+			alert('Desculpe, você não pode acrescentar nova linha. Por que o campo vazio existe');
 		}else{
 			var html = $(target_length).clone().addClass('additional_clone');		
 			$(target_length).after(html);
@@ -393,7 +393,7 @@
 		if(target_length > 1){
 			$(this).parents("tr").first().remove();		
 		}else{			
-			alert('Sorry You Can\'t Remove This Row. ');
+			alert('Desculpe, você não pode remover esta linha. ');
 		}	
 	});
 	/* === vacation === */
@@ -414,7 +414,7 @@
 		var start_date = $(target).find('.start_date').val();
 		var end_date = $(target).find('.end_date').val();
 		if(start_date=='' || end_date=="" ){
-			alert('Sorry you can\'t append new row.Because empty field exist');
+			alert('Desculpe, você não pode acrescentar nova linha. Por que o campo vazio existe');
 		}else{
 			var html = $(target_length).clone();
 			$(target_length).after(html);
