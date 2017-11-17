@@ -369,15 +369,15 @@
 		var start_date = $(target).find('.start').val();
 		var end_date = $(target).find('.end').val();
 		if(start_date=='' || end_date=="" ){
-			alert('Sorry you can\'t append new row.Because empty field exist');
+			alert('Desculpe, você não pode acrescentar nova linha. Por que o campo vazio existe');
 		}else{
 			var html = $(target_length).clone().addClass('additional_clone');		
 			$(target_length).after(html);
 			var target_class = $(this).attr('target_length');
 			$(target_class).last().find('input[type=text]').val('');
 			$(".timepicker").timepicker({
-				'minTime': '00:00am',
-				'maxTime': '24:00pm',
+				'minTime': '00:00',  // alterado datapicker do break
+				'maxTime': '23:59',
 			showInputs: false
 			});		
 		}
@@ -393,7 +393,7 @@
 		if(target_length > 1){
 			$(this).parents("tr").first().remove();		
 		}else{			
-			alert('Sorry You Can\'t Remove This Row. ');
+			alert('Desculpe, você não pode remover esta linha. ');
 		}	
 	});
 	/* === vacation === */
@@ -414,7 +414,7 @@
 		var start_date = $(target).find('.start_date').val();
 		var end_date = $(target).find('.end_date').val();
 		if(start_date=='' || end_date=="" ){
-			alert('Sorry you can\'t append new row.Because empty field exist');
+			alert('Desculpe, você não pode acrescentar nova linha. Por que o campo vazio existe');
 		}else{
 			var html = $(target_length).clone();
 			$(target_length).after(html);
@@ -640,10 +640,10 @@
 		var currentDate = fullDate.getFullYear() + "-" + twoDigitMonth + "-" + fullDate.getDate();
 		var hours = fullDate.getHours();
 		var minutes = fullDate.getMinutes();
-		var ampm = hours >= 12 ? 'pm' : 'am';
-			hours = hours % 12;
-			hours = hours ? hours : 12;		 
-		var strTime = fullDate.getHours()+ ':' + fullDate.getMinutes() + ' ' + ampm; 
+	//	var ampm = hours >= 12 ? 'pm' : 'am';
+	//		hours = hours % 12;
+	//		hours = hours ? hours : 12;		 
+		var strTime = fullDate.getHours()+ ':' + fullDate.getMinutes(); //+ ' ' + ampm
 		var ArrayId = $(el).attr('id');
 		var valNew=ArrayId.split('_');
 		var id = valNew[0];
