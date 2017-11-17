@@ -35,11 +35,8 @@
 											<h6><span><img src="<?php echo base_url(); ?>assets/images/dashboard/2.png" /> </span><?php if($this->lang->line('hospital_tab_C')){ ?><?php echo $this->lang->line('hospital_tab_C'); }else{ ?>Add Listing<?php } ?></h6>
 										</li>										   
 										<li data-tab="tab-manage-3" class="li-man">
-											<h6><span><img src="<?php echo base_url(); ?>assets/images/dashboard/3.png" /> </span><?php if($this->lang->line('hospital_tab_D')){ ?><?php echo $this->lang->line('hospital_tab_D'); }else{ ?>Appointment<?php } ?></h6>											
+											<h6><span><img src="<?php echo base_url(); ?>assets/images/dashboard/3.png" /> </span><?php if($this->lang->line('hospital_tab_D')){ ?><?php echo $this->lang->line('hospital_tab_D'); }else{ ?>Appointment<?php } ?></h6>
 										</li>
-										<li data-tab="tab-manage-12" class="li-man">
-											<h6><span><img src="<?php echo base_url(); ?>assets/images/dashboard/5.png" /> </span>	Novo Agendamento</h6>
-										</li>										
 										<li data-tab="tab-manage-4" class="li-man">
 											<h6><span><img src="<?php echo base_url(); ?>assets/images/dashboard/4.png" /> </span><?php if($this->lang->line('hospital_tab_E')){ ?><?php echo $this->lang->line('hospital_tab_E'); }else{ ?>Past Appointments<?php } ?></h6>
 										</li>																				 
@@ -57,7 +54,7 @@
 										</li>
 										<li data-tab="tab-manage-6" class="li-man">
 											<a href = "<?php echo base_url(); ?>Logout"><h6><span><img src="<?php echo base_url(); ?>assets/images/dashboard/6.png" /> </span><?php if($this->lang->line('hospital_tab_k')){ ?><?php echo $this->lang->line('hospital_tab_k'); }else{ ?>Sign out <?php } ?></h6></a>
-										</li>										
+										</li>
 									</ul>
 								</div>
 							</div>
@@ -554,7 +551,6 @@
 											</div>
 										</div>
 									</div>
-									
 									<div class="manage-ad-inner-main tab-manage-3">
 										<div class="main-2-prof">
 											<div class="row">
@@ -597,8 +593,6 @@
 											<?php } ?>                                            
 										</div>
 									</div>
-
-
 									<div class="manage-ad-inner-main tab-manage-4">
 										<div class="main-2-prof">
 											<div class="row">
@@ -758,122 +752,6 @@
 											</form>
 										</div>	
 									</div>
-									
-									<!----new appointment start -------------->									
-									<div class="manage-ad-inner-main tab-manage-12">
-										<?php   if($this->session->flashdata('messagedashfeat')) {
-												$messagedashfeat = $this->session->flashdata('messagedashfeat');  ?>
-										<div class="alert alert-<?php echo $messagedashfeat['class']; ?>">
-											<button class="close" data-dismiss="alert" type="button">×</button>
-											<?php echo $messagedashfeat['messagedashfeat']; ?>
-										</div>
-										<?php }	?>	
-
-										<div class="form-hospital-dash outhospitaladd">
-											<form method="post" data-parsley-validate="" enctype="multipart/form-data">
-												<div class="clearfix"></div>
-												<div class="form-group hos-frm-grp">
-													<div class="col-lg-10">
-														<div class="row">
-															<div class="col-lg-3">
-																<div class="text-left-hsp">
-																	<h6>Nome do Cliente</h6>
-																</div>
-															</div>
-															<div class="col-lg-8">
-																<select    name="patient_personal[]" class="form-control select2" id="exampleSelect1" multiple="multiple" data-parsley-minSelect="1" required="" >
-																<?php $arry_select = explode(",", $patient_personal->patient_firstname); foreach($patient_firstname as $row_fisrtname){ ?>
-																	<option value="<?php echo $row_fisrtname->id;?>" <?php if (in_array($row_affilliation->id, $arry_select)) echo 'selected';  ?>	 ><?php echo $row_fisrtname->patient_firstname;?></option> 
-																<?php } ?>                            
-																</select>
-															</div>
-														</div>
-														<div class="row">
-															<div class="col-lg-3">
-																<div class="text-left-hsp">
-																	<h6><?php if($this->lang->line('hospital_tab_F2')){ ?><?php echo $this->lang->line('hospital_tab_F2'); }else{ ?>Amenities<?php } ?></h6>
-																</div>
-															</div>
-															<div class="col-lg-8">
-																<select    name="amenities[]" class="form-control select2" id="exampleSelect1" multiple="multiple" data-parsley-minSelect="1" required="" >
-																<?php $arry_select = explode(",", $hospital_data->amenities);foreach($amenities as $row_amenities){ ?>
-																	<option value="<?php echo $row_amenities->id;?>" <?php if (in_array($row_amenities->id, $arry_select)) echo 'selected';  ?>><?php echo $row_amenities->facility_name;?></option> 
-																<?php } ?>                            
-																</select>
-															</div>
-														</div>
-														<div class="row">
-															<div class="col-lg-3">
-																<div class="text-left-hsp">
-																	<h6><?php if($this->lang->line('hospital_tab_F3')){ ?><?php echo $this->lang->line('hospital_tab_F3'); }else{ ?>Languages<?php } ?></h6>
-																</div>
-															</div>
-															<div class="col-lg-8">
-																<select    name="clinic_languages[]" class="form-control select2" id="exampleSelect1" multiple="multiple" data-parsley-minSelect="1" required="" >
-																<?php $arry_select = explode(",", $hospital_data->clinic_languages); foreach($tab_languages as $row_languages){ ?>
-																	<option value="<?php echo $row_languages->id;?>" <?php if (in_array($row_languages->id, $arry_select)) echo 'selected';  ?> ><?php echo $row_languages->language_name;?></option> 
-																<?php } ?>                            
-																</select>
-															</div>
-														</div>
-														<div class="row">
-															<div class="col-lg-3">
-																<div class="text-left-hsp">
-																	<h6><?php if($this->lang->line('hospital_tab_F4')){ ?><?php echo $this->lang->line('hospital_tab_F4'); }else{ ?>Specialty<?php } ?></h6>
-																</div>
-															</div>
-															<div class="col-lg-8">
-																<select    name="specialty[]" class="form-control select2" id="exampleSelect1" multiple="multiple" data-parsley-minSelect="1" required="" >
-																	<?php $arry_select = explode(",", $hospital_data->specialty);
-																	foreach($specialties as $row_specialty){ ?>
-																	<option value="<?php echo $row_specialty->id;?>" <?php if (in_array($row_specialty->id, $arry_select)) echo 'selected';  ?> ><?php echo $row_specialty->specialty_name;?></option> 
-																	<?php } ?>                            
-																</select>
-															</div>
-														</div>
-														<div class="row">
-															<div class="col-lg-3">
-																<div class="text-left-hsp">
-																	<h6><?php if($this->lang->line('hospital_tab_F5')){ ?><?php echo $this->lang->line('hospital_tab_F5'); }else{ ?>Insurance<?php } ?></h6>
-																</div>
-															</div>
-															<div class="col-lg-8">
-																<select    name="insurance[]" class="form-control select2" id="exampleSelect1" multiple="multiple" data-parsley-minSelect="1" required="" >
-																	<?php $arry_select = explode(",", $hospital_data->insurance); foreach($insurance as $row_insurance){ ?>
-																	<option value="<?php echo $row_insurance->id;?>" <?php if (in_array($row_insurance->id, $arry_select)) echo 'selected';  ?> ><?php echo $row_insurance->insurance_name;?></option> 
-																	<?php } ?>
-																</select> 
-															</div>
-														</div>
-														<div class="row">
-															<div class="col-lg-3">
-																<div class="text-left-hsp">
-																	<h6><?php if($this->lang->line('hospital_tab_F6')){ ?><?php echo $this->lang->line('hospital_tab_F6'); }else{ ?>Visitation<?php } ?></h6>
-																</div>
-															</div>
-															<div class="col-lg-8">
-																<select    name="visitation[]" class="form-control select2" id="exampleSelect1" multiple="multiple" data-parsley-minSelect="1" required="" >
-																	<?php $arry_select = explode(",", $hospital_data->visitation); foreach($visitation as $row_visitation){ ?>
-																	<option value="<?php echo $row_visitation->id;?>" <?php if (in_array($row_visitation->id, $arry_select)) echo 'selected';  ?> ><?php echo $row_visitation->reason;?></option> 
-																	<?php } ?>                            
-																</select> 
-															</div>
-														</div>
-													</div>
-												</div>	
-												<div class="clearfix"></div>
-												<div class="row">
-													<div class="col-lg-10">
-														<h4 class="h4-sub-mn"><button type="submit" name="hospital_additional-feat" value="hospital_additional-feat" class="btn btn-default bfn-sve"><?php if($lghosmod38){ echo $lghosmod38; }else { ?>Add<?php } ?><span><img src="<?php echo base_url(); ?>assets/images/dashboard/15.png" /></span></button></h4>
-													</div>
-												</div>
-											</form>
-										</div>	
-									</div> -->
-									<!----new appointment end -------------->									
-
-
-
 									<!----additional gallery start -------------->
 									<div class="manage-ad-inner-main tab-manage-9">
 										<?php   if($this->session->flashdata('messagedashgallery')) {
@@ -1166,11 +1044,11 @@
 															<div class="col-lg-4 right_pad">
 																<div class="form-group">
 																	<div class="first_pack">
-																		<?php if($packs->package_name == 'prata'){ ?>
+																		<?php if($packs->package_name == 'silver'){ ?>
 																		<img src="<?php echo base_url(); ?>assets/images/packages/noti_pic1.png" alt="" class=""/>
-																		<?php }elseif($packs->package_name == 'ouro'){ ?>
+																		<?php }elseif($packs->package_name == 'gold'){ ?>
 																		<img src="<?php echo base_url(); ?>assets/images/packages/noti_pic2.png"  alt="" class=""/>
-																		<?php }elseif($packs->package_name == 'diamante'){ ?>
+																		<?php }elseif($packs->package_name == 'diamond'){ ?>
 																		<img src="<?php echo base_url(); ?>assets/images/packages/noti_pic3.png"  alt="" class=""/>
 																		<?php }else{ ?>
 																		<img src="<?php echo base_url(); ?>assets/images/packages/noti_pic1.png" alt="" class=""/>
@@ -1186,7 +1064,7 @@
 																		<form method="post" action="" enctype="multipart/form-data">
 																			<input type="hidden" name="status" value="0" >
 																			<input type="hidden" name="hospital_type" value="hospital" >
-																			<button class="first_pack_btn buy_now" name="package_id" value="<?php echo $packs->id;?>" ><?php if($lgdoctormod73){ echo $lgdoctormod73; }else { ?>Quero esse<?php } ?></button>
+																			<button class="first_pack_btn buy_now" name="package_id" value="<?php echo $packs->id;?>" ><?php if($lgdoctormod73){ echo $lgdoctormod73; }else { ?>Select<?php } ?></button>
 																		</div>
 																	</div>
 																</div>
