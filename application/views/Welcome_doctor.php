@@ -127,31 +127,27 @@
 										<div class="row">
 											<input type="hidden" value='<?php echo $actual_data;?>' id="actual_data">
 											<div class="evnt-mn doctor" id="updates">
-												<?php if(!empty($doctor_personal)) { 
-														if(isset($doctor_personal)) { ?>
-
-
 														
 												<div class="col-lg-6" style="padding-right: 0px;">
-												<?php foreach($doctor_personal as $doctor_detail){ ?>
+					
 													<div class="evt-br doctor">				
 														<div class="left-events left-img-ph">
-															<?php if($doctor_detail->display_image != ""){ ?>
-															<img src= "<?php echo base_url().'admin/'.$doctor_detail->display_image;?>" >
+															<?php if($doctor_personal->display_image != ""){ ?>
+															<img src= "<?php echo base_url().'admin/'.$doctor_personal->display_image;?>" >
 															<?php }else{ ?>
 															<img src="<?php echo base_url(); ?>assets/images/home/man.png">
 															<?php  }?>
 														</div>
 													<div class="left-events">
-														<h5>Dr. <?php echo $doctor_detail->doctor_firstname;?> <?php echo $doctor_detail->doctor_lastname;?></h5>
-														<div class="gc-ratting" data-rate="<?php echo $doctor_detail->avg_rating; ?>" ></div> 
+														<h5>Dr. <?php echo $doctor_personal->doctor_firstname;?> <?php echo $doctor_personal->doctor_lastname;?></h5>
+														<div class="gc-ratting" data-rate="<?php echo $doctor_personal->avg_rating; ?>" ></div> 
 														<div class="pt-ent">
 															<div class="row">
 																<div class="col-lg-1">
 																	<img src="<?php echo base_url(); ?>assets/images/patient-login/13.png" />
 																</div>
 																<div class="col-lg-4">
-																	<h6> <?php if(!empty($doctor_detail->city_name)): ?><?php echo $doctor_detail->city_name;?>,<?php endif; ?><?php if(!empty($doctor_detail->state_name)): ?><?php echo $doctor_detail->state_name;?>, <?php endif; ?><?php echo $doctor_detail->country_name;?> <?php echo $doctor_detail->doctor_office_zip;?></h6>
+																	<h6> <?php if(!empty($doctor_personal->city_name)): ?><?php echo $doctor_personal->city_name;?>,<?php endif; ?><?php if(!empty($doctor_detail->state_name)): ?><?php echo $doctor_detail->state_name;?>, <?php endif; ?><?php echo $doctor_personal->country_name;?> <?php echo $doctor_personal->doctor_office_zip;?></h6>
 																</div>
 															</div>
 														</div>
@@ -160,7 +156,7 @@
 														<div class="row">
 															<div class="col-lg-4">
 																<img src="<?php echo base_url(); ?>assets/images/patient-login/14.png" />
-																<h6><a href ="<?php echo base_url(); ?>Doctor/Profile/<?php echo $doctor_detail->id; ?>"><?php if($this->lang->line('doctorfilter_slide_A14')){ ?><?php echo $this->lang->line('doctorfilter_slide_A14'); }else{ ?>View Profile<?php } ?></a></h6>
+																<h6><a href ="<?php echo base_url(); ?>Doctor/Profile/<?php echo $doctor_personal->id; ?>"><?php if($this->lang->line('doctorfilter_slide_A14')){ ?><?php echo $this->lang->line('doctorfilter_slide_A14'); }else{ ?>View Profile<?php } ?></a></h6>
 															</div>
 															<div class="col-lg-4">
 																<img src="<?php echo base_url(); ?>assets/images/patient-login/15.png" />
@@ -169,16 +165,13 @@
 														</div>
 													</div>
 												</div>
-												<?php } ?>
+												
 											</div>
 											<div class="col-lg-5 evt-br-1" id="calendar_blk">
-											<?php foreach($doctor_personal as $doctor_detail){ 
-												pull_doccalendar($doctor_detail->id);  } ?>
+											<?php  
+												pull_doccalendar($doctor_detail->id); ?>
 											</div>
-											<?php  } } else { ?>						
-												<div class="error"><h1>Desculpe, algo deu errado ;( </h1></div>
-												<div class="clearfix"></div>												
-											<?php  } ?>
+											
 											</div>
 										</div>		
 									</div>
