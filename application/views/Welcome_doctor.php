@@ -43,8 +43,8 @@
 						</form>
 					</div>
 					<div class="profile-head">
-						<h3><span><?php if($this->lang->line('doctor_slide_A1')){ ?><?php echo $this->lang->line('doctor_slide_A1'); }else{ ?>Welcome<?php } ?>,</span> <?php echo $doctor_personal->doctor_firstname;?> <?php echo $doctor_personal->doctor_lastname;?></h3>
-						<h4><span><?php if($this->lang->line('doctor_slide_A2')){ ?><?php echo $this->lang->line('doctor_slide_A2'); }else{ ?>Age<?php } ?>:</span> <?php echo $doctor_personal->doctor_age;?></h4>
+						<h3><span><?php if($this->lang->line('doctor_slide_A1')){ ?><?php echo $this->lang->line('doctor_slide_A1'); }else{ ?>Bem vindo<?php } ?>,</span> <?php echo $doctor_personal->doctor_firstname;?> <?php echo $doctor_personal->doctor_lastname;?></h3>
+						<h4><span><?php if($this->lang->line('doctor_slide_A2')){ ?><?php echo $this->lang->line('doctor_slide_A2'); }else{ ?>Idade<?php } ?>:</span> <?php echo $doctor_personal->doctor_age;?></h4>
 					</div>
 				</div>
 				<div class="col-lg-3"></div>
@@ -54,17 +54,16 @@
 					<div class="col-lg-12">
 						<div class="serch-main">
 							<div class="col-lg-8">
-								<h4><?php if($this->lang->line('doctor_slide_A3')){ ?><?php echo $this->lang->line('doctor_slide_A3'); }else{ ?>More than 5 million patients use bookmydoc to find doctors  every month.
-								Let them book appointments with use instantly<?php } ?></h4>
+								<h4>Olá, este é o seu painel de controle. Aqui você pode agendar suas consultas, configurar intervalos suas ferias.</h4>
 							</div>
-							<div class="col-lg-4">
+						<!--	<div class="col-lg-4">
 								<a href = "<?php echo base_url(); ?>Doctor/Search">
 									<div class="search-lg-mn">
 										<img src="<?php echo base_url(); ?>assets/images/patient-login/sr.png"  />
 										<span><?php if($this->lang->line('doctor_slide_A4')){ ?><?php echo $this->lang->line('doctor_slide_A4'); }else{ ?>Search now<?php } ?></span>
 									</div>
 								</a>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -74,11 +73,12 @@
 	<div class="container-fluid ">
 		<div class="tab-cnt-search">
 			<div class="container">
-				<ul class="nav nav-tabs  nav-tb dct-tab">
+			<!--	<ul class="nav nav-tabs  nav-tb dct-tab"> -->
+				<ul class="nav nav-tabs  nav-tb ">
 					<li class="active"><a data-toggle="tab" href="#homes"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/2.1.png" /> </span>Agenda</a></li>
 					<li><a data-toggle="tab" href="#menus3"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/calen.png" /> </span>Inserir consulta</a></li>					
-					<li><a data-toggle="tab" href="#menus1"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/calen.png" /> </span>Configuração da agenda</a></li>
-					<li><a data-toggle="tab" href="#menus2"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/2.3.png" /> </span>COnfigurações</a></li>
+					<li><a data-toggle="tab" href="#menus1"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/calen.png" /> </span>Configurar agenda</a></li>
+					<li><a data-toggle="tab" href="#menus2"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/2.3.png" /> </span>Cofigurações</a></li>
 				</ul>
 			</div>
 			<div class="container-fluid tab-fluid">
@@ -104,27 +104,59 @@
 									<div class="modal-content">
 										<div class="modal-header">
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
-											<h4 class="modal-title"><?php if($this->lang->line('doctor_tab_A2')){ ?><?php echo $this->lang->line('doctor_tab_A2'); }else{ ?>Appointment Details<?php } ?></h4>
+											<h4 class="modal-title">Detalhes dos agendamentos</h4>
 										</div>
 										<div class="modal-body" id="calendarmodal" >
-											<p>Some text in the modal.</p>
+											<p>Detalhes dos agendamentos</p>
 										</div>
 										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal"><?php if($this->lang->line('doctor_tab_A8')){ ?><?php echo $this->lang->line('doctor_tab_A8'); }else{ ?>Close<?php } ?></button>
+											<button type="button" class="btn btn-default" data-dismiss="modal"><?php if($this->lang->line('doctor_tab_A8')){ ?><?php echo $this->lang->line('doctor_tab_A8'); }else{ ?>Fechar<?php } ?></button>
 										</div>
 									</div>
 								</div>
-							</div>													 	
-						<!----calendar- -->										 							 
+							</div>																				 	
+						<!----calendar- -->
+					<!-- --insert- -->
+						<div id="menus3" class="tab-pane fade in active">
+							<div class="row">
+								<div class="container">
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<h4> Inserir um novo agendamento </h4>								
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>							 							 		
+					<!-- Modal -->
+							<div class="modal calendar fade" id="myModal-calendar" role="dialog">
+								<div class="modal-dialog modal-lg">    
+							<!-- Modal content-->
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+											<h4 class="modal-title">Detalhes dos agendamentos</h4>
+										</div>
+										<div class="modal-body" id="calendarmodal" >
+											<p>Detalhes dos agendamentos</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal"><?php if($this->lang->line('doctor_tab_A8')){ ?><?php echo $this->lang->line('doctor_tab_A8'); }else{ ?>Fechar<?php } ?></button>
+										</div>
+									</div>
+								</div>
+							</div>	
+							<!----insert- -->																 							 
 							<div id="menus1" class="tab-pane fade">
 								<div class="tab-cnt-search">
 									<div class="container">
 										<div class="row">
 											<div class="col-lg-offset-2 col-lg-8">
 												<ul class="nav nav-tabs  nav-tb dct-inner-tab  dct-inner-tab-1">
-													<li class="active"><a data-toggle="tab" href="#homess"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/nw-c.png" /> </span><?php if($this->lang->line('doctor_tab_B2')){ ?><?php echo $this->lang->line('doctor_tab_B2'); }else{ ?>Work Plan<?php } ?></a></li>
-													<li><a data-toggle="tab" href="#menuss1"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/break.png" /> </span><?php if($this->lang->line('doctor_tab_B3')){ ?><?php echo $this->lang->line('doctor_tab_B3'); }else{ ?>Breaks<?php } ?></a></li>
-													<li><a data-toggle="tab" href="#menuss2"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/vacation.png" /> </span><?php if($this->lang->line('doctor_tab_B4')){ ?><?php echo $this->lang->line('doctor_tab_B4'); }else{ ?>Vacations<?php } ?></a></li>
+													<li class="active"><a data-toggle="tab" href="#homess"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/nw-c.png" /> </span><?php if($this->lang->line('doctor_tab_B2')){ ?><?php echo $this->lang->line('doctor_tab_B2'); }else{ ?>Plano de Trabalho<?php } ?></a></li>
+													<li><a data-toggle="tab" href="#menuss1"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/break.png" /> </span><?php if($this->lang->line('doctor_tab_B3')){ ?><?php echo $this->lang->line('doctor_tab_B3'); }else{ ?>Intervalos<?php } ?></a></li>
+													<li><a data-toggle="tab" href="#menuss2"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/vacation.png" /> </span><?php if($this->lang->line('doctor_tab_B4')){ ?><?php echo $this->lang->line('doctor_tab_B4'); }else{ ?>Férias<?php } ?></a></li>
 												</ul>
 											</div>
 										</div>
@@ -147,10 +179,10 @@
 																	<thead>
 																		<tr>
 																			<th><input type="checkbox" class="checkall" value="" /><?php if($this->lang->line('doctor_tab_B21')){ ?><?php echo $this->lang->line('doctor_tab_B21'); }else{ ?>Checkall<?php } ?></th>
-																			<th><?php if($this->lang->line('doctor_tab_B22')){ ?><?php echo $this->lang->line('doctor_tab_B22'); }else{ ?>Day<?php } ?></th>
-																			<th><?php if($this->lang->line('doctor_tab_B23')){ ?><?php echo $this->lang->line('doctor_tab_B23'); }else{ ?>Start<?php } ?></th>
-																			<th><?php if($this->lang->line('doctor_tab_B24')){ ?><?php echo $this->lang->line('doctor_tab_B24'); }else{ ?>End<?php } ?></th>
-																			<th><?php if($this->lang->line('doctor_tab_B25')){ ?><?php echo $this->lang->line('doctor_tab_B25'); }else{ ?>Actions<?php } ?></th>
+																			<th><?php if($this->lang->line('doctor_tab_B22')){ ?><?php echo $this->lang->line('doctor_tab_B22'); }else{ ?>Dia<?php } ?></th>
+																			<th><?php if($this->lang->line('doctor_tab_B23')){ ?><?php echo $this->lang->line('doctor_tab_B23'); }else{ ?>Inicio<?php } ?></th>
+																			<th><?php if($this->lang->line('doctor_tab_B24')){ ?><?php echo $this->lang->line('doctor_tab_B24'); }else{ ?>Fim<?php } ?></th>
+																			<th><?php if($this->lang->line('doctor_tab_B25')){ ?><?php echo $this->lang->line('doctor_tab_B25'); }else{ ?>ações<?php } ?></th>
 																		</tr>
 																	</thead>
 																	<tbody>
@@ -171,7 +203,7 @@
 																	</tbody>
 																</table>
 															</div>
-															<button value="doctorsubmitwork" type="submit" name="doctorsubmitwork" id="checkcalworkbutton" class="btn btn-default checkcalworkbutton"><span><i class="fa fa-refresh"></i> </span><?php if($this->lang->line('doctor_tab_D')){ ?><?php echo $this->lang->line('doctor_tab_D'); }else{ ?>Update<?php } ?></button>
+															<button value="doctorsubmitwork" type="submit" name="doctorsubmitwork" id="checkcalworkbutton" class="btn btn-default checkcalworkbutton"><span><i class="fa fa-refresh"></i> </span><?php if($this->lang->line('doctor_tab_D')){ ?><?php echo $this->lang->line('doctor_tab_D'); }else{ ?>Atualizar<?php } ?></button>
 														</form>
 													</div>
 													<div class="col-lg-12">
@@ -193,10 +225,10 @@
 																	<thead>
 																		<tr>
 																			<th><input type="checkbox" class="checkallbreak" value="" /><?php if($this->lang->line('doctor_tab_B21')){ ?><?php echo $this->lang->line('doctor_tab_B21'); }else{ ?>Checkall<?php } ?></th>
-																			<th><?php if($this->lang->line('doctor_tab_B22')){ ?><?php echo $this->lang->line('doctor_tab_B22'); }else{ ?>Day<?php } ?></th>
-																			<th><?php if($this->lang->line('doctor_tab_B23')){ ?><?php echo $this->lang->line('doctor_tab_B23'); }else{ ?>Start<?php } ?></th>
-																			<th><?php if($this->lang->line('doctor_tab_B24')){ ?><?php echo $this->lang->line('doctor_tab_B24'); }else{ ?>End<?php } ?></th>
-																			<th><?php if($this->lang->line('doctor_tab_B25')){ ?><?php echo $this->lang->line('doctor_tab_B25'); }else{ ?>Actions<?php } ?></th>
+																			<th><?php if($this->lang->line('doctor_tab_B22')){ ?><?php echo $this->lang->line('doctor_tab_B22'); }else{ ?>Dia<?php } ?></th>
+																			<th><?php if($this->lang->line('doctor_tab_B23')){ ?><?php echo $this->lang->line('doctor_tab_B23'); }else{ ?>Inicio<?php } ?></th>
+																			<th><?php if($this->lang->line('doctor_tab_B24')){ ?><?php echo $this->lang->line('doctor_tab_B24'); }else{ ?>Fim<?php } ?></th>
+																			<th><?php if($this->lang->line('doctor_tab_B25')){ ?><?php echo $this->lang->line('doctor_tab_B25'); }else{ ?>Ações<?php } ?></th>
 																		</tr>
 																	</thead>
 																	<?php $break_time = (!empty($doctor_schedule['break_time'])) ? json_decode($doctor_schedule['break_time'],true) : array('mon'=>array(array('start'=>'','end'=>'')),'tue'=>array(array('start'=>'','end'=>'')),'wed'=>array(array('start'=>'','end'=>'')),'thu'=>array(array('start'=>'','end'=>'')),'fri'=>array(array('start'=>'','end'=>'')),'sat'=>array(array('start'=>'','end'=>'')),'sun'=>array(array('start'=>'','end'=>'')));?>
@@ -217,7 +249,7 @@
 																	</tbody>
 																</table>
 															</div>
-															<button value="doctorsubmitbreak" type="submit" name="doctorsubmitbreak" id="checkcalbreakbutton" class="btn btn-default checkcalbreakbutton"><span><i class="fa fa-refresh"></i> </span><?php if($this->lang->line('doctor_tab_D')){ ?><?php echo $this->lang->line('doctor_tab_D'); }else{ ?>Update<?php } ?></button>
+															<button value="doctorsubmitbreak" type="submit" name="doctorsubmitbreak" id="checkcalbreakbutton" class="btn btn-default checkcalbreakbutton"><span><i class="fa fa-refresh"></i> </span><?php if($this->lang->line('doctor_tab_D')){ ?><?php echo $this->lang->line('doctor_tab_D'); }else{ ?>Atualizar<?php } ?></button>
 														</form>
 													</div>
 													<div class="col-lg-12">

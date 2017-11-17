@@ -35,13 +35,10 @@
 											<h6><span><img src="<?php echo base_url(); ?>assets/images/dashboard/2.png" /> </span><?php if($this->lang->line('hospital_tab_C')){ ?><?php echo $this->lang->line('hospital_tab_C'); }else{ ?>Add Listing<?php } ?></h6>
 										</li>										   
 										<li data-tab="tab-manage-3" class="li-man">
-											<h6><span><img src="<?php echo base_url(); ?>assets/images/dashboard/3.png" /> </span> Agenda </h6>
+											<h6><span><img src="<?php echo base_url(); ?>assets/images/dashboard/3.png" /> </span><?php if($this->lang->line('hospital_tab_D')){ ?><?php echo $this->lang->line('hospital_tab_D'); }else{ ?>Appointment<?php } ?></h6>
 										</li>
-										<li data-tab="tab-manage-11" class="li-man">
-											<h6><span><img src="<?php echo base_url(); ?>assets/images/dashboard/3.png" /> </span> Novo agendamento </h6>
-										</li>										
 										<li data-tab="tab-manage-4" class="li-man">
-											<h6><span><img src="<?php echo base_url(); ?>assets/images/dashboard/4.png" /> </span>Agendamentos passados</h6>
+											<h6><span><img src="<?php echo base_url(); ?>assets/images/dashboard/4.png" /> </span><?php if($this->lang->line('hospital_tab_E')){ ?><?php echo $this->lang->line('hospital_tab_E'); }else{ ?>Past Appointments<?php } ?></h6>
 										</li>																				 
 										<li data-tab="tab-manage-8" class="li-man"  >
 											<h6><span><img src="<?php echo base_url(); ?>assets/images/dashboard/2.png" /> </span><?php if($this->lang->line('hospital_tab_F')){ ?><?php echo $this->lang->line('hospital_tab_F'); }else{ ?>Update Features<?php } ?></h6>
@@ -570,22 +567,6 @@
 												</div>
 											</div>
 										</div>
-									<div class="manage-ad-inner-main tab-manage-11">
-										<div class="main-2-prof">
-											<div class="row">
-												<div class="col-lg-1"></div>
-												<div class="col-lg-11">
-													<div class="row">
-														<div class="col-lg-5">
-															<h4><?php if($this->lang->line('hospital_tab_D1')){ ?><?php echo $this->lang->line('hospital_tab_D1'); }else{ ?>Doctor Name<?php } ?></h4>
-														</div>
-														<div class="col-lg-7">
-															<h4><?php if($this->lang->line('hospital_tab_D2')){ ?><?php echo $this->lang->line('hospital_tab_D2'); }else{ ?>Total Appointments<?php } ?></h4>
-														</div>                                                        
-													</div>
-												</div>
-											</div>
-										</div>										
 										<div class="main-3-prof">											
 											<?php foreach($app_doc as $app_doc_detail){ ?>
 											<div class="row">
