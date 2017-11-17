@@ -640,10 +640,10 @@
 		var currentDate = fullDate.getFullYear() + "-" + twoDigitMonth + "-" + fullDate.getDate();
 		var hours = fullDate.getHours();
 		var minutes = fullDate.getMinutes();
-		var ampm = hours >= 12 ? 'pm' : 'am';
-			hours = hours % 12;
-			hours = hours ? hours : 12;		 
-		var strTime = fullDate.getHours()+ ':' + fullDate.getMinutes() + ' ' + ampm; 
+	//	var ampm = hours >= 12 ? 'pm' : 'am';
+	//		hours = hours % 12;
+	//		hours = hours ? hours : 12;		 
+		var strTime = fullDate.getHours()+ ':' + fullDate.getMinutes(); //+ ' ' + ampm
 		var ArrayId = $(el).attr('id');
 		var valNew=ArrayId.split('_');
 		var id = valNew[0];
