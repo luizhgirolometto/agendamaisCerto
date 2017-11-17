@@ -139,7 +139,7 @@
 															<?php   } ?> 
 														</div>
 													<div class="left-events">
-														<h5>Dr. <?php /*echo $doctor_personal->doctor_firstname;?> <?php echo $doctor_personal->doctor_lastname; */ ?></h5>
+														<h5>Dr. <?php echo $doctor_personal->doctor_firstname;?> <?php echo $doctor_personal->doctor_lastname;  ?></h5>
 														<div class="gc-ratting" data-rate="<?php echo $doctor_personal->avg_rating; ?>" ></div> 
 														<div class="pt-ent">
 															<div class="row">
