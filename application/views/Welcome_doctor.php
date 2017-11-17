@@ -76,9 +76,9 @@
 			<!--	<ul class="nav nav-tabs  nav-tb dct-tab"> -->
 				<ul class="nav nav-tabs  nav-tb ">
 					<li class="active"><a data-toggle="tab" href="#homes"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/2.1.png" /> </span>Agenda</a></li>
-					<li><a data-toggle="tab" href="#menus3"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/calen.png" /> </span>Inserir consulta</a></li>					
-					<li><a data-toggle="tab" href="#menus1"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/calen.png" /> </span>Configurar agenda</a></li>
-					<li><a data-toggle="tab" href="#menus2"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/2.3.png" /> </span>Configurações</a></li>
+					<li><a data-toggle="tab" href="#menus1"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/calen.png" /> </span>Inserir consulta</a></li>					
+					<li><a data-toggle="tab" href="#menus2"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/calen.png" /> </span>Configurar agenda</a></li>
+					<li><a data-toggle="tab" href="#menus3"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/2.3.png" /> </span>Configurações</a></li>
 				</ul>
 			</div>
 			<div class="container-fluid tab-fluid">
@@ -96,10 +96,11 @@
 									</div>
 								</div>
 							</div>
-						</div>							 							 		
+						</div>
+													 							 		
 					<!-- Modal -->
-							<div class="modal calendar fade" id="myModal-calendar" role="dialog">
-								<div class="modal-dialog modal-lg">    
+						<div class="modal calendar fade" id="myModal-calendar" role="dialog">
+							<div class="modal-dialog modal-lg">    
 							<!-- Modal content-->
 									<div class="modal-content">
 										<div class="modal-header">
@@ -116,39 +117,13 @@
 								</div>
 							</div>																				 	
 						<!----calendar- -->
-					<!-- --insert- -->
-						<div id="menus3" class="tab-pane fade in active">
-							<div class="row">
-								<div class="container">
-									<div class="row">
-										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-											<h4> Inserir um novo agendamento </h4>								
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>							 							 		
-					<!-- Modal -->
-							<div class="modal calendar fade" id="myModal-calendar" role="dialog">
-								<div class="modal-dialog modal-lg">    
-							<!-- Modal content-->
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal">&times;</button>
-											<h4 class="modal-title">Detalhes dos agendamentos</h4>
-										</div>
-										<div class="modal-body" id="calendarmodal" >
-											<p>Detalhes dos agendamentos</p>
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal"><?php if($this->lang->line('doctor_tab_A8')){ ?><?php echo $this->lang->line('doctor_tab_A8'); }else{ ?>Fechar<?php } ?></button>
-										</div>
-									</div>
+						    <div id="menus1" class="tab-pane fade">
+								<div class="tab-cnt-search">
+								   <h6> Agendamento </h6>
 								</div>
 							</div>	
-							<!----insert- -->																 							 
-							<div id="menus1" class="tab-pane fade">
+																					 							 
+							<div id="menus2" class="tab-pane fade">
 								<div class="tab-cnt-search">
 									<div class="container">
 										<div class="row">
@@ -303,7 +278,7 @@
 							</div>
 						</div>
 					<!-- services-->
-						<div id="menus2" class="tab-pane fade">
+						<div id="menus3" class="tab-pane fade">
 							<div class="tab-cnt-search my-tab-kj">
 								<div class="container">
 									<div class="row">

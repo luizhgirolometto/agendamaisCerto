@@ -43,12 +43,12 @@ require 'admin/includes/'.$textFile.$extension;
                     <ul class="nav navbar-nav nav-head animated fadeInDown">
                         <li class="active m-1"><a href="<?php echo base_url(); ?>"><?php if($lghome){ echo $lghome; }else { ?>Home<?php }?>     <span class="sr-only">(current)</span></a></li>
                         <li><a href = "<?php echo base_url(); ?>General/aboutus"><?php if($lgaboutus){ echo $lgaboutus; }else { ?>About Us<?php }?></a></li>
-                        <li><a href = "<?php echo base_url(); ?>General/careers"><?php if($lgcareers){ echo $lgcareers; }else { ?>Careers<?php }?> </a></li>
+                   <!--     <li><a href = "<?php echo base_url(); ?>General/careers"><?php if($lgcareers){ echo $lgcareers; }else { ?>Careers<?php }?> </a></li> -->
                         <li><a href = "<?php echo base_url(); ?>General/contact"> <?php if($lgcontact){ echo $lgcontact; }else { ?> Contact <?php }?> </a></li>
                         <li><a href = "<?php echo base_url(); ?>General/terms"><?php if($lgterms){ echo $lgterms; }else { ?>Terms<?php }?> </a></li>
-                        <li><a href="javascript:void(0);"><?php if($lgfaq){ echo $lgfaq; }else { ?> FAQ<?php }?> </a></li>
-                        <li><a href="javascript:void(0);"><?php if($lgnlog){ echo $lgnlog; }else { ?> Blog<?php }?>  </a></li>
-                        <li><a href="javascript:void(0);"><?php if($lgdoctorblog){ echo $lgdoctorblog; }else { ?>  Doctor Blog<?php }?>  </a></li>
+                    <!--    <li><a href="javascript:void(0);"><?php if($lgfaq){ echo $lgfaq; }else { ?> FAQ<?php }?> </a></li> -->
+                     <!--   <li><a href="javascript:void(0);"><?php if($lgnlog){ echo $lgnlog; }else { ?> Blog<?php }?>  </a></li> -->
+                     <!--   <li><a href="javascript:void(0);"><?php if($lgdoctorblog){ echo $lgdoctorblog; }else { ?>  Doctor Blog<?php }?>  </a></li> -->
                     </ul>
                 </div>
             </div>
