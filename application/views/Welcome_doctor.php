@@ -132,11 +132,11 @@
 					
 													<div class="evt-br doctor">				
 														<div class="left-events left-img-ph">
-															<?php /*if($doctor_personal->display_image != ""){ ?> 
+															<?php if($doctor_personal->display_image != ""){ ?> 
 															<img src= "<?php echo base_url().'admin/'.$doctor_personal->display_image;?>" >
 															<?php }else{ ?>
 															<img src="<?php echo base_url(); ?>assets/images/home/man.png">
-															<?php   }*/ ?> 
+															<?php   } ?> 
 														</div>
 													<div class="left-events">
 														<h5>Dr. <?php /*echo $doctor_personal->doctor_firstname;?> <?php echo $doctor_personal->doctor_lastname; */ ?></h5>
