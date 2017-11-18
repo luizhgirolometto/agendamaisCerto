@@ -1,5 +1,6 @@
 <?php $date= date('D Y-m-d');
-echo("<script>console.log('PHP: ".$data."');</script>");  ?>
+echo("<script>console.log('PHP: ".$result."');</script>");  
+echo("<script>console.log('PHP: ".$id."');</script>");  ?>
 
 <div class="evt-br-doc" id="evt-br-doc_<?php echo $id; ?>">
 	<div class="date-head">
