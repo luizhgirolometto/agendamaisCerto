@@ -1,5 +1,5 @@
 <?php $date= date('D Y-m-d');
-echo("<script>console.log('PHP: ".$result."');</script>");  
+echo("<script>console.log('PHP: ".json_encode($result)."');</script>");  
 echo("<script>console.log('PHP: ".$id."');</script>");  ?>
 
 <div class="evt-br-doc" id="evt-br-doc_<?php echo $id; ?>">
