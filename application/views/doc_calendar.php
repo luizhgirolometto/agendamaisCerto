@@ -25,7 +25,7 @@ $date= date('D Y-m-d');
 		</div>
 		<div class="clearfix"></div>
 	</div>
-	<?php $date= date('d-m-Y'); $Day = date('D'); $s = base_url(); foreach ($result as $key => $value) { 
+	<?php $date= date('Y-m-d'); $Day = date('D'); $s = base_url(); foreach ($result as $key => $value) { 
 		
 			echo calendar_html($value,3,$Day,$date,$s,$key);
 			} ?>				
