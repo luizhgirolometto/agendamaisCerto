@@ -28,6 +28,7 @@ class Welcome extends CI_Controller {
 			$search_template['doctor_pictures'] =$this->Welcome_Model->get_singledoctorpictures($id);					
 			$search_template['doctor_schedule'] =$this->Welcome_Model->get_singledoctorschedule($id);			
 			$search_template['doctor_personal'] =$this->Welcome_Model->get_singledoctor($id);		
+			$search_template['calendario'] =$this->Doctor_Model->get_doctor_main_calendar($id);	
 			$search_template['degree'] =$this->Welcome_Model->get_degree();
 			$search_template['affilliation'] =$this->Welcome_Model->get_affilliation();
 			$search_template['visitation'] =$this->Welcome_Model->get_visitation();								        

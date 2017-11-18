@@ -168,8 +168,8 @@
 											</div>
 											<div class="col-lg-5 evt-br-1" id="calendar_blk">
 											<h6>	<?php  
-												    
-													this->Doctor_Model->get_doctor_main_calendar($doctor_personal->id);
+												    echo $calendario;
+													//this->Doctor_Model->get_doctor_main_calendar($doctor_personal->id);
 													//pull_doccalendar($doctor_personal->id); 
 												 ?> </h6>
 											</div>
