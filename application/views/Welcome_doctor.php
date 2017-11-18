@@ -147,7 +147,7 @@
 																	<img src="<?php echo base_url(); ?>assets/images/patient-login/13.png" />
 																</div>
 																<div class="col-lg-4">
-																	<h6> <?php /*if(!empty($doctor_personal->city_name)): ?><?php echo $doctor_personal->city_name;?>,<?php endif; ?><?php if(!empty($doctor_detail->state_name)): ?><?php echo $doctor_detail->state_name;?>, <?php endif; ?><?php echo $doctor_personal->country_name;?> <?php echo $doctor_personal->doctor_office_zip;*/ ?></h6>
+																	<h6> <?php if(!empty($doctor_personal->city_name)): ?><?php echo $doctor_personal->city_name;?>,<?php endif; ?><?php if(!empty($doctor_detail->state_name)): ?><?php echo $doctor_detail->state_name;?>, <?php endif; ?><?php echo $doctor_personal->country_name;?> <?php echo $doctor_personal->doctor_office_zip; ?></h6>
 																</div>
 															</div>
 														</div>
