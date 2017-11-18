@@ -1,9 +1,6 @@
 <?php
 setlocale (LC_ALL, 'ptb');
 $date= date('D Y-m-d');
-echo("<script>console.log('PHP: ".json_encode($result)."');</script>");  
-echo("<script>console.log('PHP: ".$id."');</script>");  ?>
-
 <div class="evt-br-doc" id="evt-br-doc_<?php echo $id; ?>">
 	<div class="date-head">
 		<div class="previouscalapp" id="<?php echo $id; ?>" data-date="<?php echo $date;?>" data-selected="true" data-div="evt-br-doc_<?php echo $id; ?>">
@@ -28,6 +25,12 @@ echo("<script>console.log('PHP: ".$id."');</script>");  ?>
 		<div class="clearfix"></div>
 	</div>
 	<?php $date= date('d=m-Y'); $Day = date('D'); $s = base_url(); foreach ($result as $key => $value) { 
+			echo("<script>console.log('Value: ".json_encode($value)."');</script>");  
+			echo("<script>console.log('Day: ".$Day."');</script>");  
+			echo("<script>console.log('date: ".$date."');</script>");  
+			echo("<script>console.log('s: ".$s."');</script>");  
+			echo("<script>console.log('key: ".$key."');</script>"); 
+		
 			echo calendar_html($value,3,$Day,$date,$s,$key);
 			} ?>				
 </div>
