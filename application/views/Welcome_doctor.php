@@ -168,7 +168,8 @@
 											</div>
 											<div class="col-lg-5 evt-br-1" id="calendar_blk">
 												<?php  
-												    $this->load->helper('bookmydoc');
+												    
+													get_instance()->load->helper('bookmydoc');
 													pull_doccalendar($doctor_personal->id); 
 												 ?>
 											</div>
