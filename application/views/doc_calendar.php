@@ -1,4 +1,6 @@
-<?php $date= date('D Y-m-d');
+<?php
+setlocale (LC_ALL, 'pt_BR');
+$date= date('D Y-m-d');
 echo("<script>console.log('PHP: ".json_encode($result)."');</script>");  
 echo("<script>console.log('PHP: ".$id."');</script>");  ?>
 
