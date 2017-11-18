@@ -168,10 +168,10 @@
 											</div>
 											<div class="col-lg-5 evt-br-1" id="calendar_blk">
 												<?php 
-												   $data['result'] = json_decode('[{ "DisplayText": "DrMark ", "Location": "9/111,shun street", "LatitudeLongitude": "13.671,80.230"},{ "DisplayText": "DrLasse ", "Location": "Flat 3 KSZSU", "LatitudeLongitude": "13.260,80.033"},{ "DisplayText": "DrDavid", "Location": "5/22 Bldg 3 lexile street", "LatitudeLongitude": "13.385,80.862"},{ "DisplayText": "DrLiam ", "Location": "22KsJ,paneer street", "LatitudeLongitude": "13.023,80.946"},{ "DisplayText": "DrKelly ", "Location": "7/11,vinayagar street", "LatitudeLongitude": "13.835,80.467"}]');
-												   $data['id'] = $doctor_personal->id;
+												   $saci['result'] = $calendario;
+												   $saci['id'] = $doctor_personal->id;
 													//echo json_encode($calendario);
-													$this->load->view("doc_calendar", $data);
+													$this->load->view("doc_calendar", $saci);
 													//this->Doctor_Model->get_doctor_main_calendar($doctor_personal->id);
 													//pull_doccalendar($doctor_personal->id); 
 												 ?> 
