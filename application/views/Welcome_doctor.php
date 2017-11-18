@@ -168,7 +168,7 @@
 											</div>
 											<div class="col-lg-5 evt-br-1" id="calendar_blk">
 												<?php 
-												   $data['result'] = $calendario;
+												   $data['result'] = json_encode($calendario);
 												   $data['id'] = $doctor_personal->id;
 													//echo json_encode($calendario);
 													$this->load->view("doc_calendar", $data);
