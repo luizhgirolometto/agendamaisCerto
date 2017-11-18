@@ -159,8 +159,7 @@
 																<h6><a href ="<?php echo base_url(); ?>Doctor/Profile/<?php echo $doctor_personal->id; ?>">Ver Perfil</a></h6>
 															</div>
 															<div class="col-lg-4">
-																<img src="<?php echo base_url(); ?>assets/images/patient-login/15.png" />
-																<h6><a class ="modalbookapp" href ="javascript:void(0);" id="<?php echo $doctor_personal->id; ?>" ><?php if($this->lang->line('doctorfilter_slide_A15')){ ?><?php echo $this->lang->line('doctorfilter_slide_A15'); }else{ ?>Agendar<?php } ?></a></h6>
+															
 															</div>
 														</div> 
 													</div>
@@ -168,9 +167,10 @@
 												
 											</div>
 											<div class="col-lg-5 evt-br-1" id="calendar_blk">
-												<?php  
+												<h2><?php  
+												    echo $doctor_personal->id;
 													//pull_doccalendar($doctor_personal->id); 
-												 ?>
+												 ?> </h2>
 											</div>
 											
 											</div>
