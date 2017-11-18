@@ -1,5 +1,6 @@
 <?php
-setlocale (LC_ALL, 'ptb');
+	setlocale(LC_ALL, "pt_BR", "pt_BR.iso-8859-1", "pt_BR.utf-8", "portuguese");
+	date_default_timezone_set('America/Sao_Paulo');
 $date= date('D Y-m-d');
 <div class="evt-br-doc" id="evt-br-doc_<?php echo $id; ?>">
 	<div class="date-head">
@@ -24,12 +25,7 @@ $date= date('D Y-m-d');
 		</div>
 		<div class="clearfix"></div>
 	</div>
-	<?php $date= date('d=m-Y'); $Day = date('D'); $s = base_url(); foreach ($result as $key => $value) { 
-			echo("<script>console.log('Value: ".json_encode($value)."');</script>");  
-			echo("<script>console.log('Day: ".$Day."');</script>");  
-			echo("<script>console.log('date: ".$date."');</script>");  
-			echo("<script>console.log('s: ".$s."');</script>");  
-			echo("<script>console.log('key: ".$key."');</script>"); 
+	<?php $date= date('d-m-Y'); $Day = date('D'); $s = base_url(); foreach ($result as $key => $value) { 
 		
 			echo calendar_html($value,3,$Day,$date,$s,$key);
 			} ?>				
