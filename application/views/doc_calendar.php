@@ -1,7 +1,8 @@
 <?php
 	setlocale(LC_ALL, "pt_BR", "pt_BR.iso-8859-1", "pt_BR.utf-8", "portuguese");
 	date_default_timezone_set('America/Sao_Paulo');
-$date= date('D Y-m-d');
+  $date= date('D Y-m-d');
+?>
 <div class="evt-br-doc" id="evt-br-doc_<?php echo $id; ?>">
 	<div class="date-head">
 		<div class="previouscalapp" id="<?php echo $id; ?>" data-date="<?php echo $date;?>" data-selected="true" data-div="evt-br-doc_<?php echo $id; ?>">
