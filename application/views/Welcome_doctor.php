@@ -167,10 +167,10 @@
 												
 											</div>
 											<div class="col-lg-5 evt-br-1" id="calendar_blk">
-												<h2><?php  
-												    echo $doctor_personal->id;
-													//pull_doccalendar($doctor_personal->id); 
-												 ?> </h2>
+												<?php  
+												   // echo $doctor_personal->id;
+													pull_doccalendar($doctor_personal->id); 
+												 ?>
 											</div>
 											
 											</div>
