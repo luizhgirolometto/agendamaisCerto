@@ -8,6 +8,7 @@ class Welcome extends CI_Controller {
 		$this->load->helper('url','form','bookmydoc');	
 		$this->load->model('Welcome_Model');		
 		$this->load->model('Home_Model');
+		$this->load->model('Doctor_Model');
 		$this->load->library('paypal_lib');
 		if(!$this->session->userdata('frontend_logged_in')) { 
 			redirect(base_url());

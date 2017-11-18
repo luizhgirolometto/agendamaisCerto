@@ -167,11 +167,11 @@
 												
 											</div>
 											<div class="col-lg-5 evt-br-1" id="calendar_blk">
-												<?php  
+											<h6>	<?php  
 												    
-													get_instance()->load->helper('bookmydoc');
-													pull_doccalendar($doctor_personal->id); 
-												 ?>
+													this->Doctor_Model->get_doctor_main_calendar($doctor_personal->id);
+													//pull_doccalendar($doctor_personal->id); 
+												 ?> </h6>
 											</div>
 											
 											</div>
