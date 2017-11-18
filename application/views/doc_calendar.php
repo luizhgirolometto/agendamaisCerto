@@ -1,4 +1,6 @@
-<?php $date= date('D Y-m-d'); ?>
+<?php $date= date('D Y-m-d');
+echo("<script>console.log('PHP: ".$data."');</script>");  ?>
+
 <div class="evt-br-doc" id="evt-br-doc_<?php echo $id; ?>">
 	<div class="date-head">
 		<div class="previouscalapp" id="<?php echo $id; ?>" data-date="<?php echo $date;?>" data-selected="true" data-div="evt-br-doc_<?php echo $id; ?>">
