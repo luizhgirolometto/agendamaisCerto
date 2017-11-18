@@ -1,5 +1,5 @@
 <?php
-setlocale (LC_ALL, 'pt_BR');
+setlocale (LC_ALL, 'ptb');
 $date= date('D Y-m-d');
 echo("<script>console.log('PHP: ".json_encode($result)."');</script>");  
 echo("<script>console.log('PHP: ".$id."');</script>");  ?>
@@ -27,7 +27,7 @@ echo("<script>console.log('PHP: ".$id."');</script>");  ?>
 		</div>
 		<div class="clearfix"></div>
 	</div>
-	<?php $date= date('Y-m-d'); $Day = date('D'); $s = base_url(); foreach ($result as $key => $value) { 
+	<?php $date= date('d=m-Y'); $Day = date('D'); $s = base_url(); foreach ($result as $key => $value) { 
 			echo calendar_html($value,3,$Day,$date,$s,$key);
 			} ?>				
 </div>
