@@ -1000,7 +1000,6 @@ public function getData($loadType,$loadId){
 					}
 				}
 			}
-			echo("<script>console.log('PHP: ".veio ate aqui."');</script>");
 			return $res_data;							
 		}else{
 			return null;
