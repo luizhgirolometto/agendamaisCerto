@@ -76,7 +76,7 @@
 		if($value['working_time']=='none'){
 			$calendar_html .= '<div class="error1" >
 				<p style="margin:0 auto;padding:20px">
-				No availability these days</p></div>';
+				Não disponivel nesses dias</p></div>';
 		}else{						
 			for($i=0;$i<$columns;$i++){
 				$day_C = strtolower(date('D', strtotime($Day. ' + '.$i.' days')));
@@ -107,19 +107,19 @@
 						if(array_key_exists($key,$list_brk_array)){
 						if(is_array($list_brk_array[$key])){
 							if(in_array($value1,$list_brk_array[$key])){
-								$final_array[$key][$key1] = 'Break';
+								$final_array[$key][$key1] = 'Intervalo';
 							}
 						}
 					}					
 					if(array_key_exists($key,$list_apnt_array)){
 						if(in_array($value1,$list_apnt_array[$key])){
-							$final_array[$key][$key1] = 'Booked';
+							$final_array[$key][$key1] = 'Agendado';
 						}
 					}
 					if(isset($list_vecation_array) && !empty($list_vecation_array)){
 						foreach ($list_vecation_array as $keyvlenfinal => $valuevlenfinal) {
 							if(in_array($date_val,$valuevlenfinal)){
-								$final_array[$key][$key1] = 'In vacation';
+								$final_array[$key][$key1] = 'Em férias';
 							}
 						}
 					}								
@@ -131,7 +131,7 @@
 			foreach($final_array as $keys =>$values){
 				$calendar_html .='<div class="'.$cal_cls.'"><ul>';
 				foreach($values as $key =>$value){
-					if($value != "Booked" && $value != "In vacation" && $value != "Break"){
+					if($value != "Agendado" && $value != "Em férias" && $value != "Intervalo"){
 						$path ='id="'.$id.'_'.$day[$keys].' '.$datec[$keys].'_'.$value.'" ';
 					}else{
 						$path ="";
