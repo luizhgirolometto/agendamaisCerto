@@ -31,7 +31,6 @@ class Login_Model extends CI_Model{
 		}
 	}	
 	public function Insert_patient_book($data){	
-		
 		if ($this->db->insert("patient", $data)){
 			return true;
 		}
