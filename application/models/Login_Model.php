@@ -23,7 +23,8 @@ class Login_Model extends CI_Model{
 			return true;
 		}
 	}
-	public function Insert_patient($data){			
+	public function Insert_patient($data){	
+		echo("<script>console.log('PHP: vai inserir');</script>");		
 		if ($this->db->insert("patient", $data)){
 			return true;
 		}
