@@ -380,15 +380,13 @@ class Doctor extends CI_Controller {
 			}else{
 				$this->session->set_flashdata('messagebookdoc',array('messagebookdoc' => 'Error','class' => 'success'));
 			}					
-		}elseif (isset($_POST['formdocsignupp']) && !empty ($_POST['formdocsignupp'])){		
-					
+		}elseif (isset($_POST['formdocsignupp']) && !empty ($_POST['formdocsignupp'])){							
 			$data = $_POST;			
 			unset ($data['formdocsignupp']);
-			echo("<script>console.log('PHP: ".json_encode($data)."');</script>");
 			$data['email'] = 'patientbook@agendamais.com';
 			$data['password'] = md5('asd123');
 
-			echo("<script>console.log('PHP: insert');</script>");
+			
 			$this->Login_Model->Insert_patient($data);				
 	    	$this->session->set_flashdata('messagebookdoc',array('messagebookdoc' => 'Ok ','class' => 'success'));				
 	
