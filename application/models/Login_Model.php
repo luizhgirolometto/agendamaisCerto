@@ -24,7 +24,7 @@ class Login_Model extends CI_Model{
 		}
 	}
 	public function Insert_patient($data){	
-		echo("<script>console.log('PHP: vai inserir');</script>");		
+		echo("<script>alert('PHP: vai inserir');</script>");		
 		if ($this->db->insert("patient", $data)){
 			return true;
 		}
