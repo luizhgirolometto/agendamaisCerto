@@ -1602,7 +1602,6 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 	 */
 	public function insert($table = '', $set = NULL, $escape = NULL)
 	{
-		
 		if ($set !== NULL)
 		{
 			$this->set($set, '', $escape);
@@ -1620,7 +1619,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 				$this->qb_from[0], TRUE, $escape, FALSE
 			),
 			array_keys($this->qb_set),
-			array_values($this->qb_set)
+			array_values($set)
 		);
 		echo("<script>console.log('insert: ".$sql."');</script>");
 		$this->_reset_write();
