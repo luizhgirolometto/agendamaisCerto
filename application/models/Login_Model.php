@@ -23,12 +23,9 @@ class Login_Model extends CI_Model{
 			return true;
 		}
 	}
-	public function wh_log($log_msg)
-	{
-		file_put_contents('log_' . date('d-M-Y') . '.log', $log_msg . "\n", FILE_APPEND);
-	}
+
 	public function Insert_patient($data){	
-		wh_log('adkjagdasdka');
+		echo("<script>console.log('PHP:esse insert');</script>");
 		if ($this->db->insert("patient", $data)){
 			return true;
 		}
