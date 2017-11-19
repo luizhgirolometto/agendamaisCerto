@@ -121,27 +121,28 @@
 													</div>
 												</div>										 
 												<?php }else{ ?>
-
+													<!-- Start -->
 
 													<div class="errormsg1"></div>
 															<form  role="form"  action="" method="post"  data-parsley-validate="" class="validate" enctype="multipart/form-data">
 																<input type="hidden" name="status" value="1" >
 																<div class="form-group">
-																	<label for="exampleInputPassword1"><?php if($this->lang->line('booking_A40')){ ?><?php echo $this->lang->line('booking_A40'); }else{ ?>First Name<?php } ?></label>
-																	<input type="text" name="patient_firstname" class="form-control" id="bkfname" data-parsley-pattern="^[a-zA-Z\  \/]+$" placeholder="<?php if($lgbookingmod7){ echo $lgbookingmod7; }else { echo "enter firstname"; }?>" data-parsley-minlength="3" data-parsley-maxlength="25"required =" ">
+																	<label for="exampleInputPassword1"><?php if($this->lang->line('booking_A40')){ ?><?php echo $this->lang->line('booking_A40'); }else{ ?>Nome do paciente<?php } ?></label>
+																	<input type="text" name="patient_firstname" class="form-control" id="bkfname" data-parsley-pattern="^[a-zA-Z\  \/]+$" placeholder="Nome do paciente" data-parsley-minlength="3" data-parsley-maxlength="25"required =" ">
 																</div>
 																<div class="form-group">
-																	<label for="exampleInputPassword1"><?php if($this->lang->line('booking_A52')){ ?><?php echo $this->lang->line('booking_A52'); }else{ ?>Last Name<?php } ?></label>
-																	<input type="text" name="patient_lastname" class="form-control" id="bklname" data-parsley-pattern="^[a-zA-Z\  \/]+$" placeholder="<?php if($lgbookingmod8){ echo $lgbookingmod8; }else { echo "enter firstname"; }?>" data-parsley-minlength="3" data-parsley-maxlength="25"required =" ">
+																	<label for="exampleInputPassword1"><?php if($this->lang->line('booking_A52')){ ?><?php echo $this->lang->line('booking_A52'); }else{ ?>Sobrenome<?php } ?></label>
+																	<input type="text" name="patient_lastname" class="form-control" id="bklname" data-parsley-pattern="^[a-zA-Z\  \/]+$" placeholder="Sobrenome" data-parsley-minlength="3" data-parsley-maxlength="25"required =" ">
 																</div>
 																<div class="form-group">
 																	<label for="exampleInputPassword1"><?php if($this->lang->line('booking_A41')){ ?><?php echo $this->lang->line('booking_A41'); }else{ ?>Email<?php } ?></label>
 																	<input type="text" name="email" class="form-control" id="bkemail" data-parsley-trigger="change" data-parsley-type="email" required="">
 																</div>
+																
 																<div class="form-group">
-																	<label for="exampleInputPassword1"><?php if($this->lang->line('booking_A42')){ ?><?php echo $this->lang->line('booking_A42'); }else{ ?>Create a Password<?php } ?></label>
-																	<input type="password" name="password" class="form-control" id="bkpassword" data-parsley-minlength="6" required="">
-																</div>                                                 
+																	<label for="exampleInputPassword1"><?php if($this->lang->line('booking_A42')){ ?><?php echo "Telefone"; }else{ ?>Telefone<?php } ?></label>
+																	<input type="text" name="phone" class="form-control" id="bkphone" data-parsley-minlength="10" required="">
+																</div>                                                  
 																<div class="form-group">
 																	<label for="exampleInputPassword1"><?php if($this->lang->line('booking_A43')){ ?><?php echo $this->lang->line('booking_A43'); }else{ ?>Sex<?php } ?></label>
 																	<div class="radio">
@@ -152,19 +153,15 @@
 																	</div>
 																</div>
 																<div class="clearfix"></div>                             
-																<div class="form-group">                              
-																	<div class="checkbox">
-																		<label><input type="checkbox" value="agreed" id="bkterms" name="terms" required><?php if($this->lang->line('booking_A46')){ ?><?php echo $this->lang->line('booking_A46'); }else{ ?>I Agree to the Terms and Conditions<?php } ?></label>
-																	</div>
-																</div>
+						
 																<div class="form-group">
-																	<h4> <button type="submit" value="formdocsignup" name="formdocsignup"  class="btn btn-default btn-continue btn-continue-signupbook"><?php if($lgbookingmod16){ echo $lgbookingmod16; }else { ?>Signup to continue<?php } ?></button></h4>
+																	<h4> <button type="submit" value="formdocsignupp" name="formdocsignupp"  class="btn btn-default btn-continue btn-continue-signupbook"><?php if($lgbookingmod16){ echo $lgbookingmod16; }else { ?>Continuar..<?php } ?></button></h4>
 																</div>
 															</form>
 														</div>
 
 
-												
+												<!-- End -->
 											 </br>
 												<?php  } }?>
 												<?php if (!$this->session->userdata('frontend_logged_in')){ ?>   
