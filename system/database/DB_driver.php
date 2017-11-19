@@ -1462,9 +1462,9 @@ abstract class CI_DB_driver {
 	 */
 	protected function _insert($table, $keys, $values)
 	{
-		echo("<script>console.log('PHP: ".$table."');</script>");
-		echo("<script>console.log('PHP: ".$keys."');</script>");
-		echo("<script>console.log('PHP: ".$values."');</script>");
+		echo("<script>console.log('_insert: ".json_encode($table)."');</script>");
+		echo("<script>console.log('_insert: ".json_encode($keys)."');</script>");
+		echo("<script>console.log('_insert: ".json_encode($values)."');</script>");
 		return 'INSERT INTO '.$table.' ('.implode(', ', $keys).') VALUES ('.implode(', ', $values).')';
 	}
 

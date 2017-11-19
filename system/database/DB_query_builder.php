@@ -1610,11 +1610,11 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 
 		if ($this->_validate_insert($table) === FALSE)
 		{   
-			echo("<script>console.log('PHP: validate error');</script>");
+			echo("<script>console.log('insert: validate error');</script>");
 			return FALSE;
 		}
-		echo("<script>console.log('PHP: ".json_encode($set)."');</script>");
-		echo("<script>console.log('PHP: ".json_encode($escape)."');</script>");
+		echo("<script>console.log('insert: ".json_encode($set)."');</script>");
+		echo("<script>console.log('insert: ".json_encode($escape)."');</script>");
 		$sql = $this->_insert(
 			$this->protect_identifiers(
 				$this->qb_from[0], TRUE, $escape, FALSE
@@ -1622,7 +1622,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 			array_keys($this->qb_set),
 			array_values($this->qb_set)
 		);
-		echo("<script>console.log('PHP: ".$sql."');</script>");
+		echo("<script>console.log('insert: ".$sql."');</script>");
 		$this->_reset_write();
 		return $this->query($sql);
 	}
