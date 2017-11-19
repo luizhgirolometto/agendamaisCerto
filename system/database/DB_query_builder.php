@@ -1613,7 +1613,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 			echo("<script>console.log('PHP: validate error');</script>");
 			return FALSE;
 		}
-
+		echo("<script>console.log('PHP: prepare insert');</script>");
 		$sql = $this->_insert(
 			$this->protect_identifiers(
 				$this->qb_from[0], TRUE, $escape, FALSE

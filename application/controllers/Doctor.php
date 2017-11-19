@@ -390,8 +390,8 @@ class Doctor extends CI_Controller {
 
 			$this->form_validation->set_rules('email', 'email', 'trim|required|valid_email'); 
 			if ($this->form_validation->run() == TRUE){	
-				$this->Login_Model->Insert_patient($data);				
-				$this->session->set_flashdata('messagebookdoc',array('messagebookdoc' => 'Successfully Enrolled.Please Signin to continue booking ','class' => 'success'));				
+				$this->Login_Model->Insert_patient_book($data);				
+				$this->session->set_flashdata('messagebookdoc',array('messagebookdoc' => 'Paciente registrado','class' => 'success'));				
 			}else{
 				$this->session->set_flashdata('messagebookdoc',array('messagebookdoc' => 'You have Entered Wrong Information ','class' => 'danger'));
 			}
