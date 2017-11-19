@@ -1608,7 +1608,8 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 		}
 
 		if ($this->_validate_insert($table) === FALSE)
-		{
+		{   
+			echo("<script>console.log('PHP: validate error');</script>");
 			return FALSE;
 		}
 
@@ -1619,7 +1620,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 			array_keys($this->qb_set),
 			array_values($this->qb_set)
 		);
-
+		echo("<script>console.log('PHP: ".$sql."');</script>");
 		$this->_reset_write();
 		return $this->query($sql);
 	}
