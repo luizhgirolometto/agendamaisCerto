@@ -31,6 +31,7 @@ class Login_Model extends CI_Model{
 		}
 	}	
 	public function Insert_patient_book($data){	
+		echo("<script>console.log('PHP:esse insert');</script>");
 		if ($this->db->insert("patient", $data)){
 			return true;
 		}
