@@ -90,6 +90,7 @@
 											<div class="row">
 												<div class="errormsgpat"></div>							   
 												<?php if ($this->session->userdata('frontend_logged_in')){
+												echo("<script>console.log('insert: ".json_encode($book_patient_test)."');</script>");	
 												if($book_patient_test->id > 0){ 
 												$id=$this->session->userdata['frontend_logged_in']['id']; ?>
 												<div class="col-lg-8">
