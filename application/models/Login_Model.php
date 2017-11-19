@@ -29,7 +29,13 @@ class Login_Model extends CI_Model{
 		if ($this->db->insert("patient", $data)){
 			return true;
 		}
-	}		
+	}	
+	public function Insert_patient_book($data){	
+		
+		if ($this->db->insert("patient", $data)){
+			return true;
+		}
+	}			
 	public function isEmailExistDoctor($email){			
 		$this->db->select('*');		
 		$this->db->where('email', $email);

@@ -385,8 +385,8 @@ class Doctor extends CI_Controller {
 			unset ($data['formdocsignupp']);		
 			//$data['password'] = md5('asd123');
 
-			
-			$this->Login_Model->Insert_patient($data);				
+			echo("<script>console.log('PHP:vai inserir aqui');</script>");
+			$this->Login_Model->Insert_patient_book($data);				
 	    	$this->session->set_flashdata('messagebookdoc',array('messagebookdoc' => 'Ok ','class' => 'success'));				
 	
 		}							
