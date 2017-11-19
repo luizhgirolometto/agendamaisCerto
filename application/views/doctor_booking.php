@@ -155,7 +155,7 @@
 																<div class="clearfix"></div>                             
 						
 																<div class="form-group">
-																	<h4> <button type="submit" value="formdocsignup" name="formdocsignup"  class="btn btn-default btn-continue btn-continue-signupbook"><?php if($lgbookingmod16){ echo $lgbookingmod16; }else { ?>Continuar..<?php } ?></button></h4>
+																	<h4> <button type="submit" value="formdocsignupp" name="formdocsignupp"  class="btn btn-default btn-continue btn-continue-signupbook"><?php if($lgbookingmod16){ echo $lgbookingmod16; }else { ?>Continuar..<?php } ?></button></h4>
 																</div>
 															</form>
 														</div>

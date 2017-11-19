@@ -382,15 +382,15 @@ class Doctor extends CI_Controller {
 			}					
 		}elseif (isset($_POST['formdocsignupp']) && !empty ($_POST['formdocsignupp'])){							
 			$data = $_POST;			
-			unset ($data['formdocsignupp']);
-			$data['email'] = 'patientbook@agendamais.com';
-			$data['password'] = md5('asd123');
+			unset ($data['formdocsignupp']);		
+			//$data['password'] = md5('asd123');
 
 			
 			$this->Login_Model->Insert_patient($data);				
 	    	$this->session->set_flashdata('messagebookdoc',array('messagebookdoc' => 'Ok ','class' => 'success'));				
 	
 		}							
+
 		$template['book_doctor'] =$this->Doctor_Model->get_singledoctor($id);
 		if(isset($template['book_doctor'])&!empty($template['book_doctor'])){
 			$this->load->model('Home_Model');		
