@@ -90,7 +90,7 @@
 											<div class="row">
 												<div class="errormsgpat"></div>							   
 												<?php if ($this->session->userdata('frontend_logged_in')){
-												if($this->session->userdata('super_person') == 0){ 
+												if($book_patient_test->id > 0){ 
 												$id=$this->session->userdata['frontend_logged_in']['id']; ?>
 												<div class="col-lg-8">
 													<form  role="form"  action="" id="formpatreg"   data-parsley-validate="" class="validate" enctype="multipart/form-data">

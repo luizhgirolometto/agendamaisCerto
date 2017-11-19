@@ -25,13 +25,11 @@ class Login_Model extends CI_Model{
 	}
 
 	public function Insert_patient($data){	
-		echo("<script>console.log('PHP:esse insert');</script>");
 		if ($this->db->insert("patient", $data)){
 			return true;
 		}
 	}	
 	public function Insert_patient_book($data){	
-		echo("<script>console.log('PHP:esse insert');</script>");
 		if ($this->db->insert("patient", $data, $data)){
 			return true;
 		}
@@ -79,6 +77,14 @@ class Login_Model extends CI_Model{
 		$this->db->from('specialty_categories');
 		$query = $this->db->get();
 		return $practices = $query->result();
+	}
+
+	public function get_last_patient( $email){
+		$this->db->select('*');
+		$this->db->from('patient');
+		$this->db->where('email', $email);	
+		$this->db->limit(1);
+		$query = $this->db->get();		
 	}
 	public function Role_login($email, $password){
 		$this->db->select('*,doctor_firstname as username');
