@@ -1644,7 +1644,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 			$values[] = "'" . $v . "'";
 		}
 		$testee = json_encode($values);
-		echo("<script>console.log('values: ".$testee."');</script>");
+		
 		$sql = 'INSERT INTO `'.$table.'` ('.implode(', ', array_values($keys)).') VALUES ('.implode(', ', array_values($values)).')';
 		$this->_reset_write();
 		echo("<script>console.log('_insert: ".$sql."');</script>");
