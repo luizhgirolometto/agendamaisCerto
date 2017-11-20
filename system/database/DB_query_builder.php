@@ -1628,29 +1628,23 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 
 	public function insertex($table = '', $set = NULL, $escape = NULL)
 	{
-		if ($set !== NULL)
-		{
-			$this->set($set, '', $escape);
+		
+		$arr = (array) json_decode($set);
+
+		$keys = array();
+		foreach(array_keys($arr) as $v) {
+			$keys[] = "`" . $v . "`";
 		}
 
-		if ($this->_validate_insert($table) === FALSE)
-		{   
-			//echo("<script>console.log('insert: validate error');</script>");
-			return FALSE;
+		$values = array();
+		foreach(array_values($arr) as $v) {
+			$values[] = "'" . $v . "'";
 		}
-		echo("<script>console.log('insertex: ".json_encode($set)."');</script>");
-		//echo("<script>console.log('insert: ".json_encode($escape)."');</script>");
-		$sql = $this->_insert(
-			$this->protect_identifiers(
-				$this->qb_from[0], TRUE, $escape, FALSE
-			),
-			array_keys($this->qb_set),
-			array_values($set)
-		);
-		echo("<script>console.log('insertex: ".$sql."');</script>");
-		
+
+		$sql = 'INSERT INTO `'.$table.'` ('.implode(', ', array_values($keys)).') VALUES ('.implode(', ', array_values($values)).')';
 		$this->_reset_write();
-		return $this->query($sql);
+		return $this->query($sql);		
+		
 	}
 
 	// --------------------------------------------------------------------
