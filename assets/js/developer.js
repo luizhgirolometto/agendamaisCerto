@@ -394,7 +394,7 @@
 					if(data == 'loggedIn'){	
 						$("#menus2").hide();					   	
 					    $("#menuspat2").addClass("disabledbutton");	
-						var error = '<div class="messagebookfinish">Your appointment booked successfully! </div>';
+						var error = '<div class="messagebookfinish">Sua consulta foi agendada com sucesso! </div>';
 					    $('.errormsgpat').html(error);					  				   					
 						$("#menuspat3").click();
 					    $("#menuspat3").removeClass("disabledbutton");					 
