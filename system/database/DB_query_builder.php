@@ -1628,16 +1628,17 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 
 	public function insertex($table = '', $set = NULL, $escape = NULL)
 	{
+		echo("<script>console.log('gettype: ".gettype($set)."');</script>");
 		
 		$arr = (array) json_decode($set);
 
 		$keys = array();
-		foreach(array_keys($set) as $v) {
+		foreach(array_keys($arr) as $v) {
 			$keys[] = "`" . $v . "`";
 		}
 
 		$values = array();
-		foreach(array_values($set) as $v) {
+		foreach(array_values($arr) as $v) {
 			$values[] = "'" . $v . "'";
 		}
 
