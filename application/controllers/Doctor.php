@@ -7,6 +7,7 @@ class Doctor extends CI_Controller {
 		$this->load->helper('url','form');	
 		$this->load->model('Doctor_Model');	
 		$this->load->model('Home_Model');
+		$this->load->model('Login_Model');
  	}	
 	/*public function index(){		
 		$data = array();		
@@ -380,7 +381,24 @@ class Doctor extends CI_Controller {
 			}else{
 				$this->session->set_flashdata('messagebookdoc',array('messagebookdoc' => 'Error','class' => 'success'));
 			}					
-		}						
+		}elseif (isset($_POST['formdocsignupp']) && !empty ($_POST['formdocsignupp'])){							
+			$data = $_POST;			
+			unset ($data['formdocsignupp']);		
+			//$data['password'] = md5('asd123');
+			$this->load->library('form_validation');
+			$data['password'] = md5('asd123');
+
+			$this->form_validation->set_rules('email', 'email', 'trim|required|valid_email'); 
+			if ($this->form_validation->run() == TRUE){	
+				$this->Login_Model->Insert_patient_book($data);				
+				$template['book_patient_test'] =$data['email'];
+				$this->session->set_flashdata('messagebookdoc',array('messagebookdoc' => 'Paciente registrado','class' => 'success'));				
+			}else{
+				$this->session->set_flashdata('messagebookdoc',array('messagebookdoc' => 'You have Entered Wrong Information ','class' => 'danger'));
+			}
+	
+		}							
+
 		$template['book_doctor'] =$this->Doctor_Model->get_singledoctor($id);
 		if(isset($template['book_doctor'])&!empty($template['book_doctor'])){
 			$this->load->model('Home_Model');		

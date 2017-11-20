@@ -147,30 +147,34 @@
 																	<img src="<?php echo base_url(); ?>assets/images/patient-login/13.png" />
 																</div>
 																<div class="col-lg-4">
-																	<h6> <?php /*if(!empty($doctor_personal->city_name)): ?><?php echo $doctor_personal->city_name;?>,<?php endif; ?><?php if(!empty($doctor_detail->state_name)): ?><?php echo $doctor_detail->state_name;?>, <?php endif; ?><?php echo $doctor_personal->country_name;?> <?php echo $doctor_personal->doctor_office_zip;*/ ?></h6>
+																	<h6> <?php if(!empty($doctor_personal->city_name)): ?><?php echo $doctor_personal->city_name;?>,<?php endif; ?><?php if(!empty($doctor_detail->state_name)): ?><?php echo $doctor_detail->state_name;?>, <?php endif; ?><?php echo $doctor_personal->country_name;?> <?php echo $doctor_personal->doctor_office_zip; ?></h6>
 																</div>
 															</div>
 														</div>
 													</div>
 													<div class="view-prf">
-													<!--	<div class="row">
+														<div class="row">
 															<div class="col-lg-4">
 																<img src="<?php echo base_url(); ?>assets/images/patient-login/14.png" />
-																<h6><a href ="<?php echo base_url(); ?>Doctor/Profile/<?php echo $doctor_personal->id; ?>"><?php if($this->lang->line('doctorfilter_slide_A14')){ ?><?php echo $this->lang->line('doctorfilter_slide_A14'); }else{ ?>View Profile<?php } ?></a></h6>
+																<h6><a href ="<?php echo base_url(); ?>Doctor/Profile/<?php echo $doctor_personal->id; ?>">Ver Perfil</a></h6>
 															</div>
 															<div class="col-lg-4">
-																<img src="<?php echo base_url(); ?>assets/images/patient-login/15.png" />
-																<h6><a class ="modalbookapp" href ="javascript:void(0);" id="<?php echo $doctor_detail->id; ?>" ><?php if($this->lang->line('doctorfilter_slide_A15')){ ?><?php echo $this->lang->line('doctorfilter_slide_A15'); }else{ ?>Book Online<?php } ?></a></h6>
+															
 															</div>
-														</div> -->
+														</div> 
 													</div>
 												</div>
 												
 											</div>
 											<div class="col-lg-5 evt-br-1" id="calendar_blk">
-												<?php  
-													//pull_doccalendar($doctor_detail->id); 
-												 ?>
+												<?php 
+												   $saci['result'] = $calendario;
+												   $saci['id'] = $doctor_personal->id;
+													//echo json_encode($calendario);
+													$this->load->view("doc_calendar", $saci);
+													//this->Doctor_Model->get_doctor_main_calendar($doctor_personal->id);
+													//pull_doccalendar($doctor_personal->id); 
+												 ?> 
 											</div>
 											
 											</div>

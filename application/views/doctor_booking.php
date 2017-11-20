@@ -90,7 +90,8 @@
 											<div class="row">
 												<div class="errormsgpat"></div>							   
 												<?php if ($this->session->userdata('frontend_logged_in')){
-												if($this->session->userdata('super_person') == 0){ 
+													echo("<script>console.log('doc_bok: ".$book_patient_test."');</script>");
+												if($book_patient_test != ""){ 
 												$id=$this->session->userdata['frontend_logged_in']['id']; ?>
 												<div class="col-lg-8">
 													<form  role="form"  action="" id="formpatreg"   data-parsley-validate="" class="validate" enctype="multipart/form-data">
@@ -121,7 +122,48 @@
 													</div>
 												</div>										 
 												<?php }else{ ?>
-												<h3><?php if($this->lang->line('booking_A36')){ ?><?php echo $this->lang->line('booking_A36'); }else{ ?>Please Login as patient to continue . Only patients can book appointment. <?php } ?></h3> </br>
+													<!-- Start -->
+
+													<div class="errormsg1"></div>
+															<form  role="form"  action="" method="post"  data-parsley-validate="" class="validate" enctype="multipart/form-data">
+																<input type="hidden" name="status" value="1" >
+																<div class="form-group">
+																	<label for="exampleInputPassword1"><?php if($this->lang->line('booking_A40')){ ?><?php echo $this->lang->line('booking_A40'); }else{ ?>Nome do paciente<?php } ?></label>
+																	<input type="text" name="patient_firstname" class="form-control" id="bkfname" data-parsley-pattern="^[a-zA-Z\  \/]+$" placeholder="Nome do paciente" data-parsley-minlength="3" data-parsley-maxlength="25"required =" ">
+																</div>
+																<div class="form-group">
+																	<label for="exampleInputPassword1"><?php if($this->lang->line('booking_A52')){ ?><?php echo $this->lang->line('booking_A52'); }else{ ?>Sobrenome<?php } ?></label>
+																	<input type="text" name="patient_lastname" class="form-control" id="bklname" data-parsley-pattern="^[a-zA-Z\  \/]+$" placeholder="Sobrenome" data-parsley-minlength="3" data-parsley-maxlength="25"required =" ">
+																</div>
+																<div class="form-group">
+																	<label for="exampleInputPassword1"><?php if($this->lang->line('booking_A41')){ ?><?php echo $this->lang->line('booking_A41'); }else{ ?>Email<?php } ?></label>
+																	<input type="text" name="email" class="form-control" id="bkemail" data-parsley-trigger="change" data-parsley-type="email" required="">
+																</div>
+																
+																<div class="form-group">
+																	<label for="exampleInputPassword1"><?php if($this->lang->line('booking_A42')){ ?><?php echo "Telefone"; }else{ ?>Telefone<?php } ?></label>
+																	<input type="text" name="phone" class="form-control" id="bkphone" data-parsley-minlength="10" required="">
+																</div>                                                  
+																<div class="form-group">
+																	<label for="exampleInputPassword1"><?php if($this->lang->line('booking_A43')){ ?><?php echo $this->lang->line('booking_A43'); }else{ ?>Sex<?php } ?></label>
+																	<div class="radio">
+																		<label><input type="radio" value="male" name="patient_sex" id="bksex" required=""><?php if($this->lang->line('booking_A44')){ ?><?php echo $this->lang->line('booking_A44'); }else{ ?>Male<?php } ?></label>
+																	</div>
+																	<div class="radio">
+																		<label><input type="radio" id="bksex" value="female" name="patient_sex" required=""><?php if($this->lang->line('booking_A45')){ ?><?php echo $this->lang->line('booking_A45'); }else{ ?>Female<?php } ?></label>
+																	</div>
+																</div>
+																<div class="clearfix"></div>                             
+						
+																<div class="form-group">
+																	<h4> <button type="submit" value="formdocsignupp" name="formdocsignupp"  class="btn btn-default btn-continue btn-continue-signupbook"><?php if($lgbookingmod16){ echo $lgbookingmod16; }else { ?>Continuar..<?php } ?></button></h4>
+																</div>
+															</form>
+														</div>
+
+
+												<!-- End -->
+											 </br>
 												<?php  } }?>
 												<?php if (!$this->session->userdata('frontend_logged_in')){ ?>   
 												<div class="col-lg-8">

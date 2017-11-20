@@ -8,6 +8,7 @@ class Welcome extends CI_Controller {
 		$this->load->helper('url','form','bookmydoc');	
 		$this->load->model('Welcome_Model');		
 		$this->load->model('Home_Model');
+		$this->load->model('Doctor_Model');
 		$this->load->library('paypal_lib');
 		if(!$this->session->userdata('frontend_logged_in')) { 
 			redirect(base_url());
@@ -22,11 +23,12 @@ class Welcome extends CI_Controller {
 			if($_POST){
 				$result = $this->Doctor_Pool($id,$_POST);
 			}							
-			$search_template['days'] = array('mon','tue','wed','thu','fri','sat','sun');
-			$search_template['Days'] = array('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday');
+			$search_template['days'] = array('Seg','Ter','Qua','Qui','Sex','Sab','Dom');
+			$search_template['Days'] = array('Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo');
 			$search_template['doctor_pictures'] =$this->Welcome_Model->get_singledoctorpictures($id);					
 			$search_template['doctor_schedule'] =$this->Welcome_Model->get_singledoctorschedule($id);			
 			$search_template['doctor_personal'] =$this->Welcome_Model->get_singledoctor($id);		
+			$search_template['calendario'] =$this->Doctor_Model->get_doctor_main_calendar($id);	
 			$search_template['degree'] =$this->Welcome_Model->get_degree();
 			$search_template['affilliation'] =$this->Welcome_Model->get_affilliation();
 			$search_template['visitation'] =$this->Welcome_Model->get_visitation();								        

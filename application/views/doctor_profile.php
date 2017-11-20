@@ -139,7 +139,7 @@
 			</div>
 			<div class="col-lg-6">				
 				<div class="hospital-right">
-					<h3>Book Appointment</h3>
+					<h3>Agenda</h3>
 					<div class="col-lg-10 evt-br-1" id="calendar_blk">
 						<?php pull_doccalendar($view_doctor->id); ?>
 					</div>
@@ -183,7 +183,7 @@
 							if($lgdpqbapp7){ echo $lgdpqbapp7; }else { 
 								?>
 								<div class="col-lg-6">
-										<span>No Reviews Found</span>
+										<span>Sem avaliações</span>
 									</div>
 							<?php } ?>
 						<?php } ?>
