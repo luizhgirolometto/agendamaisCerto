@@ -1630,18 +1630,19 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 	{
 		echo("<script>console.log('gettype: ".gettype($set)."');</script>");
 		
-		$arr = (array) json_decode($set);
+		echo("<script>console.log('set: ".json_decode($set)."');</script>");
+		
 
 		$keys = array();
 		foreach(array_keys($arr) as $v) {
 			$keys[] = "`" . $v . "`";
 		}
-
+		echo("<script>console.log('keys: ".json_decode($keys)."');</script>");
 		$values = array();
 		foreach(array_values($arr) as $v) {
 			$values[] = "'" . $v . "'";
 		}
-
+		echo("<script>console.log('values: ".json_decode($values)."');</script>");
 		$sql = 'INSERT INTO `'.$table.'` ('.implode(', ', array_values($keys)).') VALUES ('.implode(', ', array_values($values)).')';
 		$this->_reset_write();
 		echo("<script>console.log('_insert: ".$sql."');</script>");
