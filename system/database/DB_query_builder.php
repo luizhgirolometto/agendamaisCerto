@@ -1638,7 +1638,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 			//echo("<script>console.log('insert: validate error');</script>");
 			return FALSE;
 		}
-		//echo("<script>console.log('insertex: ".json_encode($set)."');</script>");
+		echo("<script>console.log('insertex: ".json_encode($set)."');</script>");
 		//echo("<script>console.log('insert: ".json_encode($escape)."');</script>");
 		$sql = $this->_insert(
 			$this->protect_identifiers(
@@ -1647,7 +1647,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 			array_keys($this->qb_set),
 			array_values($set)
 		);
-		//echo("<script>console.log('insertex: ".$sql."');</script>");
+		echo("<script>console.log('insertex: ".$sql."');</script>");
 		
 		$this->_reset_write();
 		return $this->query($sql);
