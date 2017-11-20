@@ -1632,12 +1632,12 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 		$arr = (array) json_decode($set);
 
 		$keys = array();
-		foreach(array_keys($arr) as $v) {
+		foreach(array_keys($set) as $v) {
 			$keys[] = "`" . $v . "`";
 		}
 
 		$values = array();
-		foreach(array_values($arr) as $v) {
+		foreach(array_values($set) as $v) {
 			$values[] = "'" . $v . "'";
 		}
 
