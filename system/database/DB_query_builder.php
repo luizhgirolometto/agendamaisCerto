@@ -1628,9 +1628,9 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 
 	public function insertex($table = '', $set = NULL, $escape = NULL)
 	{
-		echo("<script>console.log('gettype: ".gettype($set)."');</script>");
+	//	echo("<script>console.log('gettype: ".gettype($set)."');</script>");
 		
-		echo("<script>console.log('set: ".json_encode($set)."');</script>");
+	//	echo("<script>console.log('set: ".json_encode($set)."');</script>");
 		
 
 		$keys = array();
@@ -1638,7 +1638,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 			$keys[] = "`" . $v . "`";
 		}
 		$teste = json_encode($keys);
-		echo("<script>console.log('keys: ".$teste."');</script>");
+//		echo("<script>console.log('keys: ".$teste."');</script>");
 		$values = array();
 		foreach(array_values($set) as $v) {
 			$values[] = "'" . $v . "'";
