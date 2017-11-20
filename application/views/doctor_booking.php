@@ -90,7 +90,7 @@
 											<div class="row">
 												<div class="errormsgpat"></div>							   
 												<?php if ($this->session->userdata('frontend_logged_in')){
-													echo("<script>console.log('doc_bok: ".$book_patient_test."');</script>");
+													//echo("<script>console.log('doc_bok: ".$book_patient_test."');</script>");
 												if($book_patient_test != ""){ 
 												$id=$this->session->userdata['frontend_logged_in']['id']; ?>
 												<div class="col-lg-8">
@@ -296,8 +296,7 @@
 											<div class="col-lg-12">
 												<div class="appoin-det">
 													<h5><?php if($this->lang->line('booking_A9')){ ?><?php echo $this->lang->line('booking_A9'); }else{ ?>Appointment Details<?php } ?></h5>
-													<h6>Dr.<?php echo $book_doctor->doctor_firstname; ?> <?php echo $book_doctor->doctor_lastname;?> <?php if($lgbookingmod30){ echo $lgbookingmod30; }else { ?>accepts patient check-in
-													forms online. No more papers to fill out!<?php } ?></h6>
+													<h6>Dr.<?php echo $book_doctor->doctor_firstname; ?> <?php echo $book_doctor->doctor_lastname;?> <?php if($lgbookingmod30){ echo $lgbookingmod30; }else { ?>Faça o check-in do paciente e a consulta estará agendada. Não há mais papéis para preencher!<?php } ?></h6>
 												</div>
 												<div class="row">
 													<div class="col-lg-6">

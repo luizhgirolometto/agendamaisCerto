@@ -1602,7 +1602,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 	 */
 	public function insert($table = '', $set = NULL, $escape = NULL)
 	{
-		echo("<script>console.log('PHP:esse insert aqui');</script>");
+		//echo("<script>console.log('PHP:esse insert aqui');</script>");
 		if ($set !== NULL)
 		{
 			$this->set($set, '', $escape);
