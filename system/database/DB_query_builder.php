@@ -1609,21 +1609,46 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 
 		if ($this->_validate_insert($table) === FALSE)
 		{   
-			echo("<script>console.log('insert: validate error');</script>");
+			//echo("<script>console.log('insert: validate error');</script>");
 			return FALSE;
 		}
-		echo("<script>console.log('insert: ".json_encode($set)."');</script>");
-		echo("<script>console.log('insert: ".json_encode($escape)."');</script>");
+		//echo("<script>console.log('insert: ".json_encode($set)."');</script>");
+		//echo("<script>console.log('insert: ".json_encode($escape)."');</script>");
 		$sql = $this->_insert(
 			$this->protect_identifiers(
 				$this->qb_from[0], TRUE, $escape, FALSE
 			),
 			array_keys($this->qb_set),
-			array_values($set)
+			array_values($this->qb_set)
 		);
-		echo("<script>console.log('insert: ".$sql."');</script>");
+		
 		$this->_reset_write();
 		return $this->query($sql);
+	}
+
+	public function insertex($table = '', $set = NULL, $escape = NULL)
+	{
+	//	echo("<script>console.log('gettype: ".gettype($set)."');</script>");
+		
+	//	echo("<script>console.log('set: ".json_encode($set)."');</script>");
+		
+
+		$keys = array();
+		foreach(array_keys($set) as $v) {
+			$keys[] = "`" . $v . "`";
+		}
+		$teste = json_encode($keys);
+//		echo("<script>console.log('keys: ".$teste."');</script>");
+		$values = array();
+		foreach(array_values($set) as $v) {
+			$values[] = "'" . $v . "'";
+		}
+				
+		$sql = 'INSERT INTO `'.$table.'` ('.implode(', ', array_values($keys)).') VALUES ('.implode(', ', array_values($values)).')';
+		$this->_reset_write();
+		//echo("<script>console.log('_insert: ".$sql."');</script>");
+		return $this->query($sql);		
+		
 	}
 
 	// --------------------------------------------------------------------

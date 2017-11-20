@@ -1430,6 +1430,18 @@ public function getData($loadType,$loadId){
 		$result= $query->row();		
 		return $result;	
 	}
+
+	function get_singlelastpatient(){
+		$this->db->select('patient.id as id,patient.*,insurance_categories.insurance_name as insurance_title,visit_categories.reason as visit_title');
+		$this->db->from('patient');
+		$this->db->join('insurance_categories','FIND_IN_SET(insurance_categories.id, patient.insurance) > 0', 'left');
+		$this->db->join('visit_categories','FIND_IN_SET(visit_categories.id, patient.visitation) > 0', 'left');
+		$this->db->order_by('patient.id','desc');
+		$this->db->limit(1);	
+		$query = $this -> db -> get();		
+		$result= $query->row();		
+		return $result;	
+	}	
 	function update_bklevelone($id,$data){
 		$this->db->where('id', $id);
 		$result = $this->db->update('patient', $data);
