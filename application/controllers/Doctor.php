@@ -442,7 +442,7 @@ class Doctor extends CI_Controller {
 			$timearray=explode ('-',$data['appointment_time']);
 			$datafinal['appointment_time'] = trim($timearray[0].' '.$timearray[1]);
 			$datafinal['doctor_id'] = $data['doctor_id'];	
-			$datafinal['patient_id']=$this->session->userdata['frontend_logged_in']['id'];	
+			$datafinal['patient_id']=$data['pat_id'];	
 			$result = $this->Doctor_Model->book_appointment($datafinal);
 			if($result){
 				echo "loggedIn";

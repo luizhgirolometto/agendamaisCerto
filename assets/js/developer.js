@@ -387,7 +387,8 @@
 					checker: $("#checker").val(),
 					appointment_date: $("#cal_date").val(),
 					appointment_time: $("#cal_time").val(),
-					doctor_id: $("#doctor_id").val()
+					doctor_id: $("#doctor_id").val(),
+					pat_id: $("#pat_id").val()
 				}, 
 				success:function(data){			  
 					console.log(data);				   
