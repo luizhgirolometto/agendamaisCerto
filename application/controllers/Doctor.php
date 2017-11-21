@@ -377,7 +377,7 @@ class Doctor extends CI_Controller {
 			$userid=$this->session->userdata['frontend_logged_in']['id'];		
 			$result = $this->Doctor_Model->update_bklevelone($userid,$data);
 			if($result){
-				$this->session->set_flashdata('messagebookdoc',array('messagebookdoc' => 'Successfully Saved. Click Below Link To Continue ','class' => 'success'));			
+				$this->session->set_flashdata('messagebookdoc',array('messagebookdoc' => 'Salvo com sucesso. Click no link para continuar ','class' => 'success'));			
 			}else{
 				$this->session->set_flashdata('messagebookdoc',array('messagebookdoc' => 'Error','class' => 'success'));
 			}					
@@ -442,7 +442,7 @@ class Doctor extends CI_Controller {
 			$timearray=explode ('-',$data['appointment_time']);
 			$datafinal['appointment_time'] = trim($timearray[0].' '.$timearray[1]);
 			$datafinal['doctor_id'] = $data['doctor_id'];	
-			$datafinal['patient_id']=$this->session->userdata['frontend_logged_in']['id'];	
+			$datafinal['patient_id']=$data['pat_id'];	
 			$result = $this->Doctor_Model->book_appointment($datafinal);
 			if($result){
 				echo "loggedIn";

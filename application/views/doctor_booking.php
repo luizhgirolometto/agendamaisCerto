@@ -311,10 +311,10 @@
 													<div class="col-lg-6">
 														<div class="pat-det-2">
 															<h4><?php echo $patientinfo->patient_firstname; ?> <?php echo $patientinfo->patient_lastname;?></h4>
-															<h4 id="checkinsurancetext"><?php if($patientinfo->insurance_title != ""){ echo $patientinfo->insurance_title;}else{ echo "none";} ?> </h4>
+															<h4 id="checkinsurancetext"><?php if($patientinfo->insurance_title != ""){ echo $patientinfo->insurance_title;}else{ echo "Não informado";} ?> </h4>
 															<input type="hidden" value="<?php echo $patientinfo->insurance_title; ?>" id="visitationapporiginal" >
 															<input type="hidden" value="<?php echo $patientinfo->visit_title; ?>" id="insuranceapporiginal" >
-															<h4 id="checkvisittext"><?php if($patientinfo->visit_title != ""){ echo $patientinfo->visit_title; }else{ echo "none";}?></h4> 
+															<h4 id="checkvisittext"><?php if($patientinfo->visit_title != ""){ echo $patientinfo->visit_title; }else{ echo "Não informado";}?></h4> 
 															<h4><?php echo $patientinfo->patient_sex; ?></h4>
 															<h4><?php echo $cal_date;?> <?php echo $cal_time;?></h4>
 														</div>
@@ -363,7 +363,7 @@
 											<div class="col-lg-6 br-pad ">
 												<div class="ck-online">
 													<h4 class="checkonline-box1" ><span><img src="<?php echo base_url(); ?>assets/images/patient-login/tck-1.png" /></span><?php if($this->lang->line('booking_A17')){ ?><?php echo $this->lang->line('booking_A17'); }else{ ?>Check in Online<?php } ?></h4>
-													<button type="submit" class="btn checkonline-box2" name="formcheckdummy" value="formcheckdummy"> <h4  ><span><img src="<?php echo base_url(); ?>assets/images/patient-login/tick.png" /></span> <?php if($this->lang->line('booking_A18')){ ?><?php echo $this->lang->line('booking_A18'); }else{ ?> No Thanks<?php } ?></h4></button>
+													<button type="submit" class="btn checkonline-box2" name="formcheckdummy" value="formcheckdummy"> <h4  ><span><img src="<?php echo base_url(); ?>assets/images/patient-login/tick.png" /></span> <?php if($this->lang->line('booking_A18')){ ?><?php echo $this->lang->line('booking_A18'); }else{ ?> Não obrigado<?php } ?></h4></button>
 												</div>
 											</div>
 										</div>
@@ -374,7 +374,7 @@
 										<div class="col-lg-offset-1 col-lg-11">
 											<form  role="form"  action="" id="formdocrsch" method="post"  data-parsley-validate="" class="validate" enctype="multipart/form-data">
 												<div class="col-lg-6 br-patient-1">
-													<input type="hidden" value="<?php echo $id;?>" id="pat_id">
+													<input type="hidden" value="<?php echo $patientinfo->id;?>" id="pat_id">
 													<div class="form-group">
 														<label for="exampleInputPassword1"><?php if($this->lang->line('booking_A19')){ ?><?php echo $this->lang->line('booking_A19'); }else{ ?>First Name<?php } ?></label>
 														<input type="text" name="patient_firstname" value="<?php echo $patientinfo->patient_firstname;?>" class="form-control black_control" id="ufname-n" data-parsley-pattern="^[a-zA-Z\  \/]+$" placeholder="<?php if($this->lang->line('booking_A19')){ ?><?php echo $this->lang->line('booking_A19'); }else { echo "enter firstname"; } ?>" data-parsley-minlength="3" data-parsley-maxlength="25"required =" ">
