@@ -586,8 +586,8 @@
                             <span class="glyphicon  form-control-feedback"></span>
                           </div>
 						   <div class="form-group has-feedback">
-                            <label for="exampleInputEmail1">Sem avaliações </label>
-                            <input type="text" name="lgdpqbapp7" placeholder="Sem avaliações " class="form-control required regcom" >
+                            <label for="exampleInputEmail1">No Reviews Found </label>
+                            <input type="text" name="lgdpqbapp7" placeholder="No Reviews Found " class="form-control required regcom" >
                             <span class="glyphicon  form-control-feedback"></span>
                           </div>
 				   </div>

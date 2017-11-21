@@ -1,10 +1,10 @@
 <?php defined("BASEPATH") OR exit("No direct script access allowed");$active_group = "default";
           $query_builder = TRUE;
 $db["default"] = array("dsn"  => "",
-"hostname" => "localhost", 
-"username" => "root" ,
-"password" => "asd123",
-"database" => "novoo",
+"hostname" => "agendamaiswebbd.mysql.uhserver.com", 
+"username" => "agendamaiswebbd" ,
+"password" => "Fujilink1018@",
+"database" => "agendamaiswebbd",
 "dbdriver" => "mysqli",
 "pconnect" => FALSE,
 "db_debug" => (ENVIRONMENT !== "production"),
