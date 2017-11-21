@@ -392,10 +392,10 @@
 																			</div>
 																			<div class="form-group">
 																				<div class="col-lg-12">
-																					<label for="example"><?php if($this->lang->line('doctor_tab_C24')){ ?><?php echo $this->lang->line('doctor_tab_C24'); }else{ ?>Gender<?php } ?></label>
+																					<label for="example">Sexo</label>
 																					<select class="form-control" id="exampleSelect1" value="<?php echo $doctor_personal->doctor_sex;?>" name="doctor_sex" required =" "> 
-																						<option  <?php if($doctor_personal->doctor_sex == 'Female'):?>selected<?php endif; ?> ><?php if($this->lang->line('doctor_tab_C27')){ ?><?php echo $this->lang->line('doctor_tab_C27'); }else{ ?>Female<?php } ?></option>
-																						<option <?php if($doctor_personal->doctor_sex == 'Male'):?>selected<?php endif; ?> ><?php if($this->lang->line('doctor_tab_C26')){ ?><?php echo $this->lang->line('doctor_tab_C26'); }else{ ?>Male<?php } ?></option>
+																						<option  <?php if($doctor_personal->doctor_sex == 'Female'):?>selected<?php endif; ?> ><?php if($this->lang->line('doctor_tab_C27')){ ?><?php echo $this->lang->line('doctor_tab_C27'); }else{ ?>Feminino<?php } ?></option>
+																						<option <?php if($doctor_personal->doctor_sex == 'Male'):?>selected<?php endif; ?> ><?php if($this->lang->line('doctor_tab_C26')){ ?><?php echo $this->lang->line('doctor_tab_C26'); }else{ ?>Masculino<?php } ?></option>
 																					</select>
 																				</div>
 																			</div>

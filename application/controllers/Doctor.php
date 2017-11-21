@@ -473,12 +473,12 @@ class Doctor extends CI_Controller {
 	public function cancelappoinment(){
 		$id = $_POST['id'];
 		$data1 = array(
-						"final_status" => 'Cancelled',
+						"final_status" => 'Cancelado',
 						"status" => 0
 		);  
 		$result=$this->Doctor_Model->cancel_appoinment($id, $data1);
 		if($result == "cancel"){ 
-		$result = array('status'  => 'cancel','message'  => 'cancel');
+		$result = array('status'  => 'cancel','message'  => 'cancelar');
 	}
 	else{
 		$result = array('status'  => 'error','message'  => 'error');
@@ -489,12 +489,12 @@ class Doctor extends CI_Controller {
 	public function approveappoinment(){
 		$id = $_POST['id'];
 		$data1 = array(
-						"final_status" => 'Approved',
+						"final_status" => 'Aprovado',
 						"status" => 1
 		);   
 		$result=$this->Doctor_Model->approve_appoinment($id, $data1);
 		if($result == "approved"){ 
-		$result = array('status'  => 'approved','message'  => 'approved');
+		$result = array('status'  => 'approved','message'  => 'aprovado');
 	}
 	else{
 		$result = array('status'  => 'error','message'  => 'error');

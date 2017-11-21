@@ -438,7 +438,7 @@
 		click:			null,
 		half:			false,
 		hintList:		['bad', 'poor', 'regular', 'good', 'gorgeous'],
-		noRatedMsg:		'not rated yet',
+		noRatedMsg:		'Ainda não avaliado',
 		number:			5,
 		path:			base_url+'assets/images/',
 		iconRange:		[],

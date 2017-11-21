@@ -74,11 +74,11 @@
 								</div>
 								<div class="col-lg-4">
 									<div class="form-group">
-										<label for="exampleSelect1"><?php if($this->lang->line('doctorfilter_slide_A11')){ ?><?php echo $this->lang->line('doctorfilter_slide_A11'); }else{ ?>Gender<?php } ?></label>
+										<label for="exampleSelect1">Sexo</label>
 										<select class="form-control filter-field" id="exampleSelect1" name="gender" required="">  
 											<option selected="selected" value=""><?php if($this->lang->line('doctorfilter_slide_A11')){ ?><?php echo $this->lang->line('doctorfilter_slide_A11'); }else{ ?>Gender<?php } ?></option>								
-											<option value="Female" <?php if($post_data['gender'] == 'Female'){ echo "selected"; } ?> ><?php if($this->lang->line('doctorfilter_slide_A19')){ ?><?php echo $this->lang->line('doctorfilter_slide_A19'); }else{ ?> Female <?php } ?></option>
-											<option value="Male" <?php if($post_data['gender'] == 'Male'){ echo "selected"; } ?> > <?php if($this->lang->line('doctorfilter_slide_A20')){ ?><?php echo $this->lang->line('doctorfilter_slide_A20'); }else{ ?>Male <?php } ?></option>										
+											<option value="Female" <?php if($post_data['gender'] == 'Female'){ echo "selected"; } ?> ><?php if($this->lang->line('doctorfilter_slide_A19')){ ?><?php echo $this->lang->line('doctorfilter_slide_A19'); }else{ ?> Feminino <?php } ?></option>
+											<option value="Male" <?php if($post_data['gender'] == 'Male'){ echo "selected"; } ?> > <?php if($this->lang->line('doctorfilter_slide_A20')){ ?><?php echo $this->lang->line('doctorfilter_slide_A20'); }else{ ?>Masculino <?php } ?></option>										
 										</select>
 									</div>
 								</div>
