@@ -202,12 +202,12 @@ class Welcome extends CI_Controller {
 				$data = $_POST;			
 				unset ($data['doctorsubmit1']);
 				$this->Welcome_Model->update_doctor($data,$id);				  
-				$this->session->set_flashdata('message1',array('message1' => 'Successfully Updated.','class' => 'success'));								
+				$this->session->set_flashdata('message1',array('message1' => 'Atualizado com sucesso.','class' => 'success'));								
 			}elseif (isset($_POST['doctorsubmit2']) && !empty ($_POST['doctorsubmit2'])){
 				$data = $_POST;				
 				unset ($data['doctorsubmit2']);			
 				$this->Welcome_Model->update_doctor($data,$id);				  
-				$this->session->set_flashdata('message2',array('message2' => 'Successfully Updated.','class' => 'success'));						
+				$this->session->set_flashdata('message2',array('message2' => 'Atualizado com sucesso.','class' => 'success'));						
 			}elseif (isset($_POST['doctorsubmit3']) && !empty ($_POST['doctorsubmit3'])){
 				$data = $_POST;					
 				unset ($data['doctorsubmit3']);						
@@ -271,17 +271,17 @@ class Welcome extends CI_Controller {
 				$this->load->library('form_validation');
 				$this->form_validation->set_rules('city_name', 'city_name', 'required|callback_isCityExist'); 
 				if ($this->form_validation->run() == FALSE){	
-					$this->session->set_flashdata('messagecity',array('messagecity' => 'City is already exist','class' => 'danger'));	
+					$this->session->set_flashdata('messagecity',array('messagecity' => 'A cidade já esta cadastrada','class' => 'danger'));	
 				}else{
 					$this->Welcome_Model->add_city($data);				  
-					$this->session->set_flashdata('messagecity',array('messagecity' => 'Successfully Added.','class' => 'success')); }
+					$this->session->set_flashdata('messagecity',array('messagecity' => 'Adicionada com sucesso.','class' => 'success')); }
 			}elseif (isset($_POST['doctorsubmitwork']) & !empty ($_POST['doctorsubmitwork'])){
 				unset ($_POST['doctorsubmitwork']);
 				$session_data = $this->session->userdata('frontend_logged_in');
 				$id=$this->session->userdata['frontend_logged_in']['id'];					 
 				$data['working_time'] = json_encode($_POST['work']);								
 				$this->Welcome_Model->update_workingtime($id,$data);
-				$this->session->set_flashdata('messagework', array('messagework' => 'working time updated successfully', 'title' => 'Success !', 'class' => 'success'));	 
+				$this->session->set_flashdata('messagework', array('messagework' => 'Plano de trabalho atualizado com sucesso', 'title' => 'Success !', 'class' => 'success'));	 
 			}elseif (isset($_POST['doctorsubmitbreak']) & !empty ($_POST['doctorsubmitbreak'])){
 				unset ($_POST['doctorsubmitbreak']);
 				$session_data = $this->session->userdata('frontend_logged_in');
@@ -299,7 +299,7 @@ class Welcome extends CI_Controller {
 				}			      
 				$data['break_time'] = json_encode($break_time);					
 				$this->Welcome_Model->update_workingtime($id,$data);
-				$this->session->set_flashdata('messagebreak', array('messagebreak' => 'break time updated successfully', 'title' => 'Success !', 'class' => 'success'));									
+				$this->session->set_flashdata('messagebreak', array('messagebreak' => 'Intervalos atualizados com sucesso', 'title' => 'Success !', 'class' => 'success'));									
 			}elseif (isset($_POST['doctorsubmitvacation']) & !empty ($_POST['doctorsubmitvacation'])){
 				unset ($_POST['doctorsubmitvacation']);
 				$session_data = $this->session->userdata('frontend_logged_in');

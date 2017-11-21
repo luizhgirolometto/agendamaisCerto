@@ -111,7 +111,7 @@
 											<p>Detalhes dos agendamentos</p>
 										</div>
 										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal"><?php if($this->lang->line('doctor_tab_A8')){ ?><?php echo $this->lang->line('doctor_tab_A8'); }else{ ?>Fechar<?php } ?></button>
+											<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
 										</div>
 									</div>
 								</div>
@@ -726,7 +726,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Select location</h4>
+                    <h4 class="modal-title">Selecione a localização</h4>
 				</div>
 				<div class="modal-body" id="canvas1">
 					<div id='map_canvas' ></div>
@@ -735,8 +735,8 @@
 					<input type="hidden" id="pick-lng" />                    
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-custom select-location">Select Location</button>
+					<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fechar</button>
+					<button type="button" class="btn btn-custom select-location">Selecione a localização</button>
 				</div>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
