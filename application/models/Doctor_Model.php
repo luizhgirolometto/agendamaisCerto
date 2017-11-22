@@ -1325,9 +1325,9 @@ public function getData($loadType,$loadId){
 		for($i=0;$i<$columns;$i++){
 			$date_C = date('D Y-m-d', strtotime($date. ' + '.$i.' days'));
 			if($cls==1){
-				$data .='<div class="dttime-list"><li><h5>'.$date_C.'</li></h5></div>';
+				$data .='<div class="dttime-list"><li><h5>'.strftime('%a, %d-%m-%y', strtotime($date_C)).'</li></h5></div>';
 			}else{
-				$data .='<div class="dttime-list"><li><h5>'.$date_C.'</li></h5></div>';
+				$data .='<div class="dttime-list"><li><h5>'.$strftime('%a, %d-%m-%y', strtotime($date_C)).'</li></h5></div>';
 			}
 		}
 		return $data;
@@ -1369,19 +1369,19 @@ public function getData($loadType,$loadId){
 					if(array_key_exists($key,$list_brk_array)){
 						if(is_array($list_brk_array[$key])){
 							if(in_array($value1,$list_brk_array[$key])){
-								$final_array[$key][$key1] = 'Break';
+								$final_array[$key][$key1] = 'Intervalo';
 							}
 						}
 					}				
 					if(array_key_exists($key,$list_apnt_array)){
 						if(in_array($value1,$list_apnt_array[$key])){
-							$final_array[$key][$key1] = 'Booked';
+							$final_array[$key][$key1] = 'Agendado';
 						}
 					}								
 					if(isset($list_vecation_array) && !empty($list_vecation_array)){
 						foreach ($list_vecation_array as $keyvlenfinal => $valuevlenfinal) {
 							if(in_array($date_val,$valuevlenfinal)){
-								$final_array[$key][$key1] = 'In vacation';
+								$final_array[$key][$key1] = 'Em férias';
 							}
 						}
 					}
@@ -1393,7 +1393,7 @@ public function getData($loadType,$loadId){
 			foreach($final_array as $keys =>$values){
 				$calendar_html .='<div class="'.$cal_cls.'"><ul>';
 				foreach($values as $key =>$value){
-					if($value != "Booked" && $value != "In vacation" && $value != "Break"){
+					if($value != "Agendado" && $value != "Em férias" && $value != "Intervalo"){
 						$path ='id="'.$id.'_'.$day[$keys].' '.$datec[$keys].'_'.$value.'" ';
 					}else{
 						$path ="";
