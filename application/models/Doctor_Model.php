@@ -1320,7 +1320,7 @@ public function getData($loadType,$loadId){
 			echo json_encode($result_data);
 		}
 	}
-	function date_slide($columns,$date,$cls,$key,$s){
+	function date_slideex($columns,$date,$cls,$key,$s){
 		setlocale(LC_ALL, "pt_BR", "pt_BR.iso-8859-1", "pt_BR.utf-8", "portuguese");
 		date_default_timezone_set('America/Sao_Paulo');				
 		$data = '';
@@ -1336,6 +1336,19 @@ public function getData($loadType,$loadId){
 		}
 		return $data;
 	}
+	function date_slide($columns,$date,$cls,$key,$s){		
+		$data = '';
+		for($i=0;$i<$columns;$i++){
+			$date_C = date('D Y-m-d', strtotime($date. ' + '.$i.' days'));
+			$date_C = strftime('%a, %d-%m-%y', strtotime($date_C));
+			if($cls==1){
+				$data .='<div class="dttime-list"><li><h5>'.$date_C.'</li></h5></div>';
+			}else{
+				$data .='<div class="dttime-list"><li><h5>'.$date_C.'</li></h5></div>';
+			}
+		}
+		return $data;
+	}	
 	function single_calendar_html($value,$columns,$Day,$date,$s,$key){
 		error_reporting(0);
 		$id = $key;		
