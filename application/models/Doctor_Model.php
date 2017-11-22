@@ -1325,7 +1325,8 @@ public function getData($loadType,$loadId){
 		date_default_timezone_set('America/Sao_Paulo');				
 		$data = '';
 		for($i=0;$i<$columns;$i++){
-			$date_C = strftime('%a, %d-%m-%y', strtotime($date. ' + '.$i.' days'));
+			//$date_C = strftime('%a, %d-%m-%y', strtotime($date. ' + '.$i.' days'));
+			$date_C = date('Y-m-d', strtotime($date. ' + '.$i.' days'));
 			if($cls==1){
 				$data .='<div class="dttime-list"><li><h5>' .$date_C. '</li></h5></div>';
 			}else{
