@@ -9,7 +9,7 @@
                            <th>Paciente</th>                                                                             
                            <th>Hora</th>                                                                             
                            <th>Sexo</th>                                                                             
-                           <th><?php if($this->lang->line('doctor_tab_A6')){ ?><?php echo $this->lang->line('doctor_tab_A6'); }else{ ?>Insurance<?php } ?></th>                                                                             
+                           <th>Convênio</th>                                                                             
                            <th>Motivo</th>                                                                             
                            <th>Status</th>
 				   <th>Ações</th>       

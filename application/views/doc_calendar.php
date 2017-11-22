@@ -11,7 +11,7 @@
 		<div class="dttime">
 			<ul>
 				<div class="dttime-list">
-					<li> <h5><?php echo $date;?></h5></li>
+					<li> <h5><?php echo strftime('%a, %d-%m-%Y', strtotime($data)); ?></h5></li>
 				</div>
 				<div class="dttime-list">
 					<li> <h5><?php echo date('D Y-m-d', strtotime($date. ' + 1 days')) ?></h5> </li>
