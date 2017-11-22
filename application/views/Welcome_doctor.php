@@ -226,7 +226,7 @@
 																		<?php foreach ($Days as $key => $value) { ?>
 																		<tr>
 																			<td ><input type="checkbox" /></td>
-																			<td><ul><li><span><?php echo $value;?></span></li></ul></td>
+																			<td><ul><li><span><?php echo $Daysptb[$key];?></span></li></ul></td>
 																			<div class="timecal1">
 																			<td><h4><input  style="width: 70px;" type="text" class="timepicker pickwkt" onkeypress="return false;"  name="work[<?php echo $days[$key];?>][start]" value="<?php echo (!empty($working_time)) ? isset($working_time[ $days[$key]]['start']) ? $working_time[ $days[$key]]['start'] :'' : '';?>" readonly></h4></td>
 																			<td><h4><input   style="width: 70px;" type="text"   class="timepicker pickwkt"  onkeypress="return false;"  name="work[<?php echo $days[$key];?>][end]" value="<?php echo (!empty($working_time)) ? isset($working_time[ $days[$key]]['end']) ? $working_time[ $days[$key]]['end'] :'' : '';?>" readonly></h4></td>
@@ -275,7 +275,7 @@
 																		<div target=".<?php echo $value;?>" >
 																			<tr class="clone_break" id="dummy">
 																				<td ><input type="checkbox" class="daycheckone"name="<?php echo $value;?>"/></td>
-																				<td><ul><li><span><?php echo $value;?></span></li></ul></td>
+																				<td><ul><li><span><?php echo $Daysptb[$key];?></span></li></ul></td>
 																				<td><h4><input  style="width: 70px;" type="text" class="timepicker start"  name="break[<?php echo $days[$key];?>][start][]" value="<?php echo (!empty($break_time)) ? isset($breaktime['start']) ? $breaktime['start'] :'' : '';?>" onkeypress="return false;" readonly></h4></td>
 																				<td><h4><input   style="width: 70px;" type="text" class="timepicker end" name="break[<?php echo $days[$key];?>][end][]" value="<?php echo (!empty($break_time)) ? isset($breaktime['end']) ? $breaktime['end'] :'' : '';?>" onkeypress="return false;" readonly></h4></td>
 																				<td><a href="javascript:void(0);" class="checkcalbreakedit"  ><i class="fa fa-pencil edit-link"></i></a> <a href="javascript:void(0);" class="add_calbreak" ><i class="fa fa-plus edit-link-1"></i></a><a href="javascript:void(0);" class="remove_calbreak"><i class="fa fa-times edit-link-1"></i></a></td>

@@ -60,7 +60,8 @@ class Doctor extends CI_Controller {
 		$template['post_data'] = $data;
 		$template['doctors'] =$this->Doctor_Model->getall_doctorsconven($data);			
 		$template['days'] = array('mon','tue','wed','thu','fri','sat','sun');
-		$template['Days'] = array('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday');				
+		$template['Days'] = array('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday');		
+		$template['Daysptb'] = array('Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo');		
 		$template['countries'] =$this->Doctor_Model->get_countries();	
 		$template['languages'] =$this->Doctor_Model->get_languages();
 		$template['specialties'] =$this->Doctor_Model->get_specialties();
@@ -252,6 +253,7 @@ class Doctor extends CI_Controller {
 		$map_template['footer_cities'] =$this->Home_Model->pull_footer_cities(6);
 		$map_template['days'] = array('mon','tue','wed','thu','fri','sat','sun');
 		$map_template['Days'] = array('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday');
+		$map_template['Daysptb'] = array('Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo');
 		$map_template['cities'] =$this->Doctor_Model->pull_cities();
 		$map_template['languages'] =$this->Doctor_Model->get_languages();
 		$map_template['specialties'] =$this->Doctor_Model->get_specialties();

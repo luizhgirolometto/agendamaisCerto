@@ -159,6 +159,7 @@ class Doctor_ctrl extends CI_Controller {
 		$template['page_title'] = "Doctor Working Time";	
 		$template['days'] = array('mon','tue','wed','thu','fri','sat','sun');
 		$template['Days'] = array('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday');
+		$template['Daysptb'] = array('Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo');
 		if($_POST){
 			$data = $_POST;
 			$result = $this->Doctor_model->update_worktime($data);
@@ -176,6 +177,7 @@ class Doctor_ctrl extends CI_Controller {
 		$template['page_title'] = "Doctor Working Time";	
 		$template['days'] = array('mon','tue','wed','thu','fri','sat','sun');
 		$template['Days'] = array('Monday','Thuesday','Wednesday','Thursday','Friday','Saturday','Sunday');
+		$template['Daysptb'] = array('Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo');
 		$this->load->view('template',$template);			  		  
 		if($_POST){
 			$data = $_POST;				
@@ -214,6 +216,7 @@ class Doctor_ctrl extends CI_Controller {
 		$template['data'] = $this->Doctor_model->get_singleid($id);
 		$template['days'] = array('mon','tue','wed','thu','fri','sat','sun');
 		$template['Days'] = array('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday');
+		$template['Daysptb'] = array('Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo');		
 		if(!empty($template['data'])) {			
 			if($_POST){
 				$work_time['working_time'] = json_encode($_POST['work']);

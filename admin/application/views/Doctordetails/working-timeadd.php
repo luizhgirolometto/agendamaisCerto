@@ -22,7 +22,7 @@
 					<?php $working_time = (!empty($data->working_time)) ? json_decode($data->working_time,true) : array();?>
 					<?php foreach ($Days as $key => $value) { ?>
 					<div class="form-group work_group">          	      
-						<label class="col-sm-2 control-label" for="inputEmail3"><?php echo $value;?></label>
+						<label class="col-sm-2 control-label" for="inputEmail3"><?php echo $Daysptb[$key];?></label>
 						<div class="col-sm-4">
 							<input type="text" placeholder="Start Time" id="<?php echo $value . '_working_start';?>" required value="<?php echo (!empty($data->working_time)) ? isset($working_time[ $days[$key]]['start']) ? $working_time[ $days[$key]]['start'] :'' : '';?>" name="work[<?php echo $days[$key];?>][start]" class="form-control timepicker start abc">
 						</div>
@@ -59,7 +59,7 @@
 					<?php foreach ($Days as $key => $value) { ?>
 						<?php foreach ($break_time[$days[$key]] as $br_key => $breaktime) { ?>		
 							<div class="form-group break_group <?php echo $value;?>">
-								<label class="col-sm-2 control-label" for="inputEmail3"><?php echo $value;?></label>
+								<label class="col-sm-2 control-label" for="inputEmail3"><?php echo $Daysptb[$key];?></label>
 								<div class="col-sm-3">
 									<input type="text"  placeholder="Start Time" id="<?php echo $value . '_break_start';?>" <?php echo  (empty($data->break_time)) ? 'disabled' :'';?> value="<?php echo (!empty($data->break_time) && !empty($data->break_time)) ? isset($breaktime['start']) ? $breaktime['start'] :'' : '';?>"  name="break[<?php echo $days[$key];?>][start][]" class="form-control timepicker start abc <?php echo $days[$key] . '_break';?>">
 								</div>
