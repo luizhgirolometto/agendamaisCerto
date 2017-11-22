@@ -1340,7 +1340,7 @@ public function getData($loadType,$loadId){
 		$data = '';
 		for($i=0;$i<$columns;$i++){
 			$date_C = date('D Y-m-d', strtotime($date. ' + '.$i.' days'));
-			$date_C = strftime('%a, %d-%m-%y', strtotime($date_C));
+			//$date_C = strftime('%a, %d-%m-%y', strtotime($date_C));
 			if($cls==1){
 				$data .='<div class="dttime-list"><li><h5>'.$date_C.'</li></h5></div>';
 			}else{
