@@ -14,13 +14,13 @@
 		<div class="dttime">
 			<ul>
 				<div class="dttime-list">
-					<li> <h5><?php echo strftime('%a, %d-%m-%Y', strtotime($date)); ?></h5></li>
+					<li> <h5><?php echo strftime('%a, %d-%m-%y', strtotime($date)); ?></h5></li>
 				</div>
 				<div class="dttime-list">
-					<li> <h5><?php echo strftime('%a, %d-%m-%Y', strtotime($date2)); ?></h5> </li>
+					<li> <h5><?php echo strftime('%a, %d-%m-%y', strtotime($date2)); ?></h5> </li>
 				</div>
 				<div class="dttime-list">	
-					<li> <h5><?php echo strftime('%a, %d-%m-%Y', strtotime($date3)); ?></h5> </li>
+					<li> <h5><?php echo strftime('%a, %d-%m-%y', strtotime($date3)); ?></h5> </li>
 				</div>
 			</ul>
 		</div>

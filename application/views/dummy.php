@@ -1,5 +1,10 @@
 <?php
-$date= date('D Y-m-d');
+	setlocale(LC_ALL, "pt_BR", "pt_BR.iso-8859-1", "pt_BR.utf-8", "portuguese");
+	date_default_timezone_set('America/Sao_Paulo');
+
+  $date= date('D Y-m-d');
+  $date2 = date('D Y-m-d', strtotime($date. ' + 1 days'));
+  $date3 = date('D Y-m-d', strtotime($date. ' + 2 days'));
 ?>
 
 <div class="evt-br-doc" id="evt-br-doc_<?php echo $id; ?>">
@@ -10,17 +15,17 @@ $date= date('D Y-m-d');
 				<div class="dttime">
                         <ul>
 						<div class="dttime-list">
-                            <li> <h5><?php echo $date= date('D Y-m-d');?></h5>
+                            <li> <h5><?php echo strftime('%a, %d-%m-%y', strtotime($date)); ?></h5>
                                 
                             </li>
 							</div>
 						<div class="dttime-list">
-                            <li> <h5><?php echo date('D Y-m-d', strtotime($date. ' + 1 days')) ?></h5>
+                            <li> <h5><?php echo strftime('%a, %d-%m-%y', strtotime($date2));  ?></h5>
                                 
                             </li>
 							</div>
 						<div class="dttime-list">	
-                            <li> <h5><?php echo date('D Y-m-d', strtotime($date. ' + 2 days')) ?></h5>
+                            <li> <h5><?php echo strftime('%a, %d-%m-%y', strtotime($date3)); ?></h5>
                                 
                             </li>
 							</div>
