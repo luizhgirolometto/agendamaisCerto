@@ -1051,9 +1051,9 @@
 						$(".center.calendarmod").removeClass("label-success");
 						$(".center.calendarmod").addClass("label-warning");	
 						$('.centerl.calendarmod.label-warning').val('');
-						var valuepasser = 'Cancelled';
+						var valuepasser = 'Cancelado';
 						$('.center.calendarmod.label-warning').html(valuepasser);
-						$(".errresult").html("Succesfully Canceled").delay(2000).show().fadeOut();	
+						$(".errresult").html("Cancelado!").delay(2000).show().fadeOut();	
 						
 					}
 					else{
@@ -1078,9 +1078,9 @@
 						$(".center.calendarmod").removeClass("label-warning");
 						$(".center.calendarmod").addClass("label-success");	
 						$('.center.calendarmod.label-success').val('');
-						var valuepasser = 'Approved';
+						var valuepasser = 'Aprovado';
 						$('.center.calendarmod.label-success').html(valuepasser);
-						$(".sucresult").html("Succesfully Approved").delay(2000).show().fadeOut();	
+						$(".sucresult").html("Aprovado com sucesso!").delay(2000).show().fadeOut();	
 					}
 					else{
 						$(".sucresult").html(" error").delay(2000).show().fadeOut();;	

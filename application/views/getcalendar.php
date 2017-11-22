@@ -9,7 +9,7 @@
                            <th>Paciente</th>                                                                             
                            <th>Hora</th>                                                                             
                            <th>Sexo</th>                                                                             
-                           <th><?php if($this->lang->line('doctor_tab_A6')){ ?><?php echo $this->lang->line('doctor_tab_A6'); }else{ ?>Insurance<?php } ?></th>                                                                             
+                           <th>Convênio</th>                                                                             
                            <th>Motivo</th>                                                                             
                            <th>Status</th>
 				   <th>Ações</th>       
@@ -23,10 +23,11 @@
                            <td class="hidden"><?php echo $doctors->id; ?></td>
                            <td class="center"><?php echo $doctors->patient_firstname ." ". $doctors->patient_lastname; ?></td>                         
                            <td class="center"><?php echo $doctors->appointment_time; ?></td>
-                           <td class="center"><?php echo $doctors->patient_sex; ?></td>
+                           <td class="center"><?php if($doctors->patient_sex == 'male'){ ?><?php echo "Masculino"; }else{ ?><?php echo "Feminino"; } ?> </td>
+                           
                            <td class="center"><?php echo $doctors->insurance; ?></td>
-                           <td class="center"><?php echo $doctors->reason.''.$doctors->final_status;?></td>
-                              <td  <span class="center  calendarmod  <?php if($doctors->status == '1')
+                           <td class="center"><?php echo $doctors->reason?></td>
+                           <td  <span class="center  calendarmod  <?php if($doctors->status == '1')
 							{
 							echo "label-success";
 							}else
@@ -44,7 +45,7 @@
 
              <td class="center"> 
 			 <button value="doctorcancel" type="submit" name="doctorcancel" id="cancelappoinment"  onClick="cancelappoinment(this,<?php echo $doctors->id; ?>)" data-id="<?php echo $doctors->id; ?>" class="btn btn-default"><span></span>Cancelar</button>
-		       <button value="doctorcancel" type="submit" name="doctorcancel"   onClick="approveappoinment(this,<?php echo $doctors->id; ?>)" data-id="<?php echo $doctors->id; ?>" class="btn btn-default"><span></span>Aprovar</button></td>
+		       <button value="doctorcancel" type="submit" name="doctorcancel"   onClick="approveappoinment(this,<?php echo $doctors->id; ?>)" data-id="<?php echo $doctors->id; ?>" class="btn btn-default"><span></span>Aprovar </button></td>
                         </tr>
 						
                         <?php

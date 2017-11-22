@@ -136,7 +136,7 @@
 																	<input type="text" name="patient_lastname" class="form-control" id="bklname" data-parsley-pattern="^[a-zA-Z\  \/]+$" placeholder="Sobrenome" data-parsley-minlength="3" data-parsley-maxlength="25"required =" ">
 																</div>
 																<div class="form-group">
-																	<label for="exampleInputPassword1"><?php if($this->lang->line('booking_A41')){ ?><?php echo $this->lang->line('booking_A41'); }else{ ?>Email<?php } ?></label>
+																	<label for="exampleInputPassword1"><?php if($this->lang->line('booking_A41')){ ?><?php echo $this->lang->line('booking_A41'); }else{ ?>E-mail<?php } ?></label>
 																	<input type="text" name="email" class="form-control" id="bkemail" data-parsley-trigger="change" data-parsley-type="email" required="">
 																</div>
 																
@@ -386,10 +386,10 @@
 													<div class="form-group">
 														<label for="exampleInputPassword1"><?php if($this->lang->line('booking_A21')){ ?><?php echo $this->lang->line('booking_A21'); }else{ ?>Sex<?php } ?></label>
 														<div class="radio">
-															<label><input type="radio" value="male" <?php if ($patientinfo->patient_sex == "male"){?>checked <?php } ?> name="patient_sex" id="usex-n" required=""><?php if($this->lang->line('booking_A22')){ ?><?php echo $this->lang->line('booking_A22'); }else { ?>Male<?php } ?></label>
+															<label><input type="radio" value="male" <?php if ($patientinfo->patient_sex == "male"){?>checked <?php } ?> name="patient_sex" id="usex-n" required=""><?php if($this->lang->line('booking_A22')){ ?><?php echo $this->lang->line('booking_A22'); }else { ?>Masculino<?php } ?></label>
 														</div>
 														<div class="radio">
-															<label><input type="radio" id="usex-n" <?php if ($patientinfo->patient_sex == "female"){?>checked <?php } ?> value="female" name="patient_sex" required=""><?php if($this->lang->line('booking_A23')){ ?><?php echo $this->lang->line('booking_A23'); }else { ?>Female<?php } ?></label>
+															<label><input type="radio" id="usex-n" <?php if ($patientinfo->patient_sex == "female"){?>checked <?php } ?> value="female" name="patient_sex" required=""><?php if($this->lang->line('booking_A23')){ ?><?php echo $this->lang->line('booking_A23'); }else { ?>Feminino<?php } ?></label>
 														</div>
 													</div>
 												</div>

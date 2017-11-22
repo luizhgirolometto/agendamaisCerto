@@ -2,11 +2,11 @@
    <!-- Content Header (Page header) -->
    <section class="content-header">
       <h1>
-         Patient Details
+         Detalhes do paciente
       </h1>
       <ol class="breadcrumb">
          <li><a href="#"><i class="fa fa-male"></i>Home</a></li>
-         <li class="active"> Patient Details</li>
+         <li class="active"> Detalhes do paciente</li>
       </ol>
    </section>
    <!-- Main content -->
@@ -29,7 +29,7 @@
             <!-- /.box -->
             <div class="box">
                <div class="box-header">
-                  <h3 class="box-title"> Patient Details</h3>
+                  <h3 class="box-title"> Detalhes do paciente</h3>
                </div>
                <!-- /.box-header -->
                <div class="box-body">
@@ -37,11 +37,11 @@
                      <thead>
                         <tr>
                            <th class="hidden">ID</th>
-                           <th>Patient Firstname</th>                                                                             
-                           <th>Patient Lastname</th> 
-                           <th>Email</th>						                         
-                           <th>Patient Sex</th>                         
-                           <th>Action</th>
+                           <th>Primeiro nome</th>                                                                             
+                           <th>Sobrenome</th> 
+                           <th>E-mail</th>						                         
+                           <th>Sexo</th>                         
+                           <th>Ação</th>
                         </tr>
                      </thead> 
                      <tbody>
@@ -56,25 +56,15 @@
                            <td class="center"><?php echo $patient->patient_sex; ?></td>                         
                            <td class="center">	                           
                               <a class="btn btn-sm bg-olive show-patientdetails"  href="javascript:void(0);"  data-id="<?php echo $patient->id; ?>">
-                              <i class="fa fa-fw fa-eye"></i> View </a>							
+                              <i class="fa fa-fw fa-eye"></i> Ver </a>							
                               <a class="btn btn-sm btn-danger" href="<?php echo base_url();?>Patient_details/delete_Patient/<?php echo $patient->id; ?>" onClick="return doconfirm()">
-                              <i class="fa fa-fw fa-trash"></i>Delete</a>							
+                              <i class="fa fa-fw fa-trash"></i>Excluir</a>							
                            </td>
                         </tr>
                         <?php
                            }
                            ?>
                      </tbody>
-                     <tfoot>
-                        <tr>
-                           <th class="hidden">ID</th>
-                           <th>Patient Firstname</th>                                                                             
-                           <th>Patient Lastname</th> 
-                           <th>Email</th>						                          
-                           <th>Patient Sex</th>                         
-                           <th>Action</th>
-                        </tr>
-                     </tfoot>
                   </table>
                </div>
                <!-- /.box-body -->
@@ -92,14 +82,14 @@
       <div class="modal-content">
          <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">View Patient Details</h4>
+            <h4 class="modal-title">Ver detalhes do paciente</h4>
          </div>
          <div class="modal-patientbody">
          </div>
          <div class="business_info">
          </div>
          <div class="modal-footer">
-            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fechar</button>
          </div>
       </div>
       <!-- /.modal-content -->
