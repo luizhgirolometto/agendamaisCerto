@@ -1327,9 +1327,9 @@ public function getData($loadType,$loadId){
 		for($i=0;$i<$columns;$i++){
 			$date_C = date('D Y-m-d', strtotime($date. ' + '.$i.' days'));
 			if($cls==1){
-				$data .='<div class="dttime-list"><li><h5>'.strftime('%a, %d-%m-%y', strtotime($date_C)).'</li></h5></div>';
+				$data .='<div class="dttime-list"><li><h5>' .strftime('%a, %d-%m-%y', $date_C). '</li></h5></div>';
 			}else{
-				$data .='<div class="dttime-list"><li><h5>'. strftime('%a, %d-%m-%y', strtotime($date_C)).'</li></h5></div>';
+				$data .='<div class="dttime-list"><li><h5>' .strftime('%a, %d-%m-%y', $date_C). '</li></h5></div>';
 			}
 		}
 		return $data;
