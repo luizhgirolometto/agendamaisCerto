@@ -23,7 +23,7 @@
                            <td class="hidden"><?php echo $doctors->id; ?></td>
                            <td class="center"><?php echo $doctors->patient_firstname ." ". $doctors->patient_lastname; ?></td>                         
                            <td class="center"><?php echo $doctors->appointment_time; ?></td>
-                           <td class="center"><?php $doctors->patient_sex == 'male'){ ?><?php echo "Masculino"; }else{ ?><?php echo "Feminino"; } ?> </td>
+                           <td class="center"><?php if($doctors->patient_sex == 'male'){ ?><?php echo "Masculino"; }else{ ?><?php echo "Feminino"; } ?> </td>
                            
                            <td class="center"><?php echo $doctors->insurance; ?></td>
                            <td class="center"><?php echo $doctors->reason?></td>
