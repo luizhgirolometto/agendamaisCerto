@@ -1320,14 +1320,16 @@ public function getData($loadType,$loadId){
 			echo json_encode($result_data);
 		}
 	}
-	function date_slide($columns,$date,$cls,$key,$s){		
+	function date_slide($columns,$date,$cls,$key,$s){
+		setlocale(LC_ALL, "pt_BR", "pt_BR.iso-8859-1", "pt_BR.utf-8", "portuguese");
+		date_default_timezone_set('America/Sao_Paulo');				
 		$data = '';
 		for($i=0;$i<$columns;$i++){
 			$date_C = date('D Y-m-d', strtotime($date. ' + '.$i.' days'));
 			if($cls==1){
 				$data .='<div class="dttime-list"><li><h5>'.strftime('%a, %d-%m-%y', strtotime($date_C)).'</li></h5></div>';
 			}else{
-				$data .='<div class="dttime-list"><li><h5>'.$strftime('%a, %d-%m-%y', strtotime($date_C)).'</li></h5></div>';
+				$data .='<div class="dttime-list"><li><h5>'. strftime('%a, %d-%m-%y', strtotime($date_C)).'</li></h5></div>';
 			}
 		}
 		return $data;
