@@ -240,7 +240,7 @@
 																</table>
 															</div>
 														
-																<button value="doctorsubmitwork" type="submit" name="doctorsubmitwork" id="checkcalworkbutton" class="thumbnail-wrapper"> <span><i class="fa fa-refresh"></i> </span><?php if($this->lang->line('doctor_tab_D')){ ?><?php echo $this->lang->line('doctor_tab_D'); }else{ ?>Atualizar<?php } ?></button>
+																<button value="doctorsubmitwork" type="submit" name="doctorsubmitwork" id="checkcalworkbutton" class="thumbnail-wrapper"> Atualizar </button>
 														
 														</form>
 													</div>
