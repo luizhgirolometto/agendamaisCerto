@@ -239,9 +239,9 @@
 																	</tbody>
 																</table>
 															</div>
-														
+														<div class="col-lg-12">
 																<button value="doctorsubmitwork" type="submit" name="doctorsubmitwork" id="checkcalworkbutton" class="thumbnail-wrapper"> Salvar </button>
-														
+														</div>
 														</form>
 													</div>
 													
@@ -285,13 +285,12 @@
 																	</tbody>
 																</table>
 															</div>
-															<button value="doctorsubmitbreak" type="submit" name="doctorsubmitbreak" id="checkcalbreakbutton" class="thumbnail-wrapper"> Salvar </button>
-															
+															<div class="col-lg-12">
+																<button value="doctorsubmitbreak" type="submit" name="doctorsubmitbreak" id="checkcalbreakbutton" class="thumbnail-wrapper"> Salvar </button>
+															</div>
 														</form>
 													</div>
-													<div class="col-lg-12">
-														<h5 class="pad-center pad-center-1"><img src="<?php echo base_url(); ?>assets/images/patient-login/tick.png" > </h5>
-													</div>
+													
 												</div>
 												<div id="menuss2" class="tab-pane fade">
 												<?php   if($this->session->flashdata('messagevacation')) {
@@ -319,21 +318,20 @@
 																	<div target=".<?php echo $value['startdate'];?><?php echo $value['enddate'];?>" >
 																	<tr>
 																		<td ><input type="checkbox" name="<?php echo $value['startdate'];?><?php echo $value['enddate'];?>"/></td>
-																		<td><h6><input  required type="text" data-inputmask="'alias': 'yyyy-mm-dd'" data-mask="" id="dpd1" class="start_date dpd1" placeholder="yyyy-mm-dd" required  name="startdate[]" onkeypress="return false;"  value="<?php echo $value['startdate'];?>" readonly></h6></td>
-																		<td><h6><input required type="text"  data-inputmask="'alias': 'yyyy-mm-dd'" data-mask="" id="dpd1" class="end_date dpd1" placeholder="yyyy-mm-dd" required name="enddate[]"  onkeypress="return false;"  value="<?php echo $value['enddate'];?>" readonly></h6></td>
+																		<td><h6><input  required type="text" data-inputmask="'alias': 'dd-mm-yyyy'" data-mask="" id="dpd1" class="start_date dpd1" placeholder="dd-mm-aaaa" required  name="startdate[]" onkeypress="return false;"  value="<?php echo $value['startdate'];?>" readonly></h6></td>
+																		<td><h6><input required type="text"  data-inputmask="'alias': 'dd-mm-yyyy'" data-mask="" id="dpd1" class="end_date dpd1" placeholder="dd-mm-aaaa" required name="enddate[]"  onkeypress="return false;"  value="<?php echo $value['enddate'];?>" readonly></h6></td>
 																		<td><a href="javascript:void(0);" class="checkcalvacationedit"  ><i class="fa fa-pencil edit-link"></i></a><a href="javascript:void(0);" class="add_calvacation"><i class="fa fa-plus edit-link-1"></i></a><a href="javascript:void(0);" class="remove_calvacation-vacation"><i class="fa fa-times edit-link-1"></i></a></td>
 																	</tr> </div>
 																	<?php } ?>
 																</tbody>
 															</table>
 														</div>
-														<button value="doctorsubmitvacation" type="submit" name="doctorsubmitvacation" id="checkcalvacationbutton" class="thumbnail-wrapper"> Salvar </button>
-														
+														<div class="col-lg-12">
+															<button value="doctorsubmitvacation" type="submit" name="doctorsubmitvacation" id="checkcalvacationbutton" class="thumbnail-wrapper"> Salvar </button>
+														</div>
 													</div>
 												</form>
-												<div class="col-lg-12">
-													<h5 class="pad-center pad-center-1"><img src="<?php echo base_url(); ?>assets/images/patient-login/tick.png"> </h5>
-												</div>
+												
 											</div>
 										</div>
 									</div>
