@@ -239,12 +239,14 @@
 																	</tbody>
 																</table>
 															</div>
-															<button value="doctorsubmitwork" type="submit" name="doctorsubmitwork" id="checkcalworkbutton" class="btn btn-default checkcalworkbutton"><span><i class="fa fa-refresh"></i> </span><?php if($this->lang->line('doctor_tab_D')){ ?><?php echo $this->lang->line('doctor_tab_D'); }else{ ?>Atualizar<?php } ?></button>
+															<div class="col-lg-12">
+																<h5 class="pad-center pad-center-1"><img src="<?php echo base_url(); ?>assets/images/patient-login/tick.png" > </h5>
+																												
+																<button value="doctorsubmitwork" type="submit" name="doctorsubmitwork" id="checkcalworkbutton" class="btn btn-default checkcalworkbutton"><span><i class="fa fa-refresh"></i> </span><?php if($this->lang->line('doctor_tab_D')){ ?><?php echo $this->lang->line('doctor_tab_D'); }else{ ?>Atualizar<?php } ?></button>
+															</div>
 														</form>
 													</div>
-													<div class="col-lg-12">
-														<h5 class="pad-center pad-center-1"><img src="<?php echo base_url(); ?>assets/images/patient-login/tick.png" > </h5>
-													</div>
+													
 												</div>
 												<div id="menuss1" class="tab-pane fade">
 												<?php   if($this->session->flashdata('messagebreak')) {
