@@ -3521,17 +3521,18 @@ height: 150px;
 }
 
 .thumbnail-wrapper {
-    display:inline-block;
-    position:relative;
+    background-color: transparent;
+    border: none;
+    color: transparent;
+    background-image: url("../images/patient-login/tick.png");
+    height:35px;
+    width:90px;
 }
-.thumbnail-wrapper button {
-    position:absolute;
-    top:50%;
-    left:50%;
-    -webkit-transform:translate3d(-50%, -50%, 0);
-    -moz-transform:translate3d(-50%, -50%, 0);
-    transform:translate3d(-50%, -50%, 0);
+
+.thumbnail-wrapper:hover {
+    background-image: url("botao-hover.png");
 }
+
 /* end css nikhila */
 .inputimage{
 
