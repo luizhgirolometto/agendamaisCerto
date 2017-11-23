@@ -188,7 +188,7 @@
 								<div class="tab-cnt-search">
 									<div class="container">
 										<div class="row">
-											<div class="col-lg-offset-2 col-lg-8">
+											<div class="col-lg-offset-2 col-lg-10">
 												<ul class="nav nav-tabs  nav-tb dct-inner-tab  dct-inner-tab-1">
 													<li class="active"><a data-toggle="tab" href="#homess"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/nw-c.png" /> </span><?php if($this->lang->line('doctor_tab_B2')){ ?><?php echo $this->lang->line('doctor_tab_B2'); }else{ ?>Plano de Trabalho<?php } ?></a></li>
 													<li><a data-toggle="tab" href="#menuss1"><span><img src="<?php echo base_url(); ?>assets/images/patient-login/break.png" /> </span><?php if($this->lang->line('doctor_tab_B3')){ ?><?php echo $this->lang->line('doctor_tab_B3'); }else{ ?>Intervalos<?php } ?></a></li>
@@ -240,7 +240,7 @@
 																</table>
 															</div>
 														
-																<button value="doctorsubmitwork" type="submit" name="doctorsubmitwork" id="checkcalworkbutton" class="thumbnail-wrapper"> Atualizar </button>
+																<button value="doctorsubmitwork" type="submit" name="doctorsubmitwork" id="checkcalworkbutton" class="thumbnail-wrapper"> Salvar </button>
 														
 														</form>
 													</div>
@@ -285,7 +285,8 @@
 																	</tbody>
 																</table>
 															</div>
-															<button value="doctorsubmitbreak" type="submit" name="doctorsubmitbreak" id="checkcalbreakbutton" class="btn btn-default checkcalbreakbutton"><span><i class="fa fa-refresh"></i> </span><?php if($this->lang->line('doctor_tab_D')){ ?><?php echo $this->lang->line('doctor_tab_D'); }else{ ?>Atualizar<?php } ?></button>
+															<button value="doctorsubmitbreak" type="submit" name="doctorsubmitbreak" id="checkcalbreakbutton" class="thumbnail-wrapper"> Salvar </button>
+															
 														</form>
 													</div>
 													<div class="col-lg-12">
@@ -326,7 +327,8 @@
 																</tbody>
 															</table>
 														</div>
-														<button value="doctorsubmitvacation" type="submit" name="doctorsubmitvacation" id="checkcalvacationbutton" class="btn btn-default checkcalvacationbutton"><span><i class="fa fa-refresh"></i> </span><?php if($this->lang->line('doctor_tab_D')){ ?><?php echo $this->lang->line('doctor_tab_D'); }else{ ?>Update<?php } ?></button>
+														<button value="doctorsubmitvacation" type="submit" name="doctorsubmitvacation" id="checkcalvacationbutton" class="thumbnail-wrapper"> Salvar </button>
+														
 													</div>
 												</form>
 												<div class="col-lg-12">

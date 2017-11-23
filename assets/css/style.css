@@ -3521,19 +3521,16 @@ height: 150px;
 }
 
 .thumbnail-wrapper {
-    background-color: transparent;
-    border: none;
-    color: transparent;
-    background-image: url("../images/patient-login/tick.png");
+    color: #f4f4f4;
+    /* background-image: url(../images/patient-login/tick.png); */
     background-repeat: no-repeat;
-    height:40px;
-    width:200px;
+    height: 40px;
+    width: 200px;
+    font-size: 140%;
+    background-color: #1f8dd6;
+    border: 1px solid #1f8dd6;
 }
 
-.thumbnail-wrapper:hover {
-    background-image: url("../images/patient-login/tick.png");
-    background-repeat: no-repeat;
-}
 
 /* end css nikhila */
 .inputimage{
