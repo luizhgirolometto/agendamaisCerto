@@ -58,7 +58,7 @@
 									</ul>
 								</div>
 							</div>
-							<div class="col-lg-10">									
+							<div class="col-lg-9">									
 								<div class="manage-ad-inner-main tab-manage-1 forhomesubhosp ">
 									<div class="checkin-homesubhosp">
 										<?php if($end_date == NULL && $trial_date >= $current_date  ){?>
