@@ -65,8 +65,8 @@
 										<div class="head-my-listing">
 											<div class="alert">
 												<button class="close" data-dismiss="alert" type="button">×</button>
-												<h3><?php if($lghosmod101){ echo $lghosmod101; }else { ?>Alert Message<?php } ?>:</h3>
-												<h4><?php if($lghosmod102){ echo $lghosmod102; }else { ?> You are using 15 days free trial version.Once the trial period is expired , your clinic listing will be removed from Search Filter. Select any package to extend your service under Bookmydoc.<?php } ?>
+												<h3>Mensagem de Alerta:</h3>
+												<h4>Você está usando versão de teste gratuita de 15 dias. Uma vez expirado o período de avaliação, sua listagem de detalhes será removida do Filtro de Pesquisa. Selecione qualquer pacote para estender seu serviço AgendaMais.
 												</h4>
 											</div>								 
 										</div>
@@ -74,8 +74,8 @@
 										<div class="head-my-listing">
 											<div class="alert">
 												<button class="close" data-dismiss="alert" type="button">×</button>
-												<h3><?php if($lghosmod101){ echo $lghosmod101; }else { ?>Alert Message<?php } ?>:</h3>
-												<h4>  <?php if($lghosmod103){ echo $lghosmod103; }else { ?>Your Package period is expired . Kindly Select any package to list your clinic under Bookmydoc.<?php } ?>
+												<h3>Mensagem de Alerta:</h3>
+												<h4>Você está usando versão de teste gratuita de 15 dias. Uma vez expirado o período de avaliação, sua listagem de detalhes será removida do Filtro de Pesquisa. Selecione qualquer pacote para estender seu serviço AgendaMais.
 												</h4>
 											</div>								 
 										</div>
@@ -120,7 +120,7 @@
 										</div>
 										<?php } else{ ?> 
 										<div class="head-my-listing">
-											<h1 > No Listings Found </h1>
+											<h1 > Sem agendamentos encontrados </h1>
 										</div>
 										<?php } ?> 
 									</div>
