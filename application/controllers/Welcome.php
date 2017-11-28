@@ -492,7 +492,7 @@ class Welcome extends CI_Controller {
 					}													
 					$result = $this->Welcome_Model->add_clinic_doc($data);				
 					if($result){					  	
-						$this->session->set_flashdata('messagedash3', array('messagedash3' => 'Doctor Added successfully', 'title' => 'Success !', 'class' => 'success'));
+						$this->session->set_flashdata('messagedash3', array('messagedash3' => 'Médico adicionado com sucesso.', 'title' => 'Success !', 'class' => 'success'));
 						redirect(base_url().'Welcome');               				 
 					}else{
 						$this->session->set_flashdata('messagedash3', array('messagedash3' => 'Sorry, Error Occurred', 'title' => 'Error !', 'class' => 'danger'));	
@@ -726,7 +726,7 @@ class Welcome extends CI_Controller {
 					}													
 					$result = $this->Welcome_Model->add_medical_doc($data);				
 					if($result){					  	
-						$this->session->set_flashdata('messagedash3', array('messagedash3' => 'Doctor Added successfully', 	'title' => 'Success !', 'class' => 'success'));
+						$this->session->set_flashdata('messagedash3', array('messagedash3' => 'Médico adicionado com sucesso.', 	'title' => 'Success !', 'class' => 'success'));
 						redirect(base_url().'Welcome');               				 
 					}else{
 						$this->session->set_flashdata('messagedash3', array('messagedash3' => 'Sorry, Error Occurred', 'title' => 'Error !', 'class' => 'danger'));	
@@ -960,7 +960,7 @@ class Welcome extends CI_Controller {
 					}				
 					$result = $this->Welcome_Model->add_hospital_doc($data);				
 					if($result){					  	
-						$this->session->set_flashdata('messagedash3', array('messagedash3' => 'Doctor Added successfully', 'title' => 'Success !', 'class' => 'success'));
+						$this->session->set_flashdata('messagedash3', array('messagedash3' => 'Médico adicionado com sucesso.', 'title' => 'Success !', 'class' => 'success'));
 						redirect(base_url().'Welcome');               				 
 					}else{
 						$this->session->set_flashdata('messagedash3', array('messagedash3' => 'Sorry, Error Occurred', 'title' => 'Error !', 'class' => 'danger'));	
